@@ -1,0 +1,41 @@
+
+.why_us{
+    margin-top: 5%;
+    margin-bottom: 3%;
+    font-family: 'Cinzel',serif;
+    font-size: 4vw;
+    color:#000000;
+    text-align: center;
+}
+
+
+h3{
+    text-align: center;
+}
+.custom-container{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.why_us_img{
+    width: 100px;
+    height: 100px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.why_us_text{
+    font-family: 'Arapey',serif;
+    font-size: 1.3vw;
+    color:black;
+    font-weight: bold;
+}
+.why_us_text:hover{
+    color:red;
+    transition: .4s ease-in-out;
+    transform: scale(1.2);
+}
+
+
+
+
+
+

@@ -11,7 +11,8 @@
 |
 */
 
-Route::get('/', 'IndexController@index');
+Route::get('halls','HallsController@halls');
+Route::get('course','CourseController@course');
 
 Auth::routes();
 
