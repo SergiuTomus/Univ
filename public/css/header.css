@@ -61,10 +61,16 @@
     margin: 2% 4%;
 }
 .navbar-default {
-    background-color: rgba(0,0,0,0.5);
-    border-color: rgba(0,0,0,0.5);
+    background-color: transparent;
+    border-color: rgba(255,255,255,0.2);
     height: 15%;
 }
+
+.navbar-default2{
+    background-color: rgba(0,0,0,0.5);
+    border-color: rgba(0,0,0,0.5);
+}
+
 .navbar-default .navbar-brand {
     color: #777;
     margin: 5%;

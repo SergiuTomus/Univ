@@ -17,3 +17,16 @@ Route::get('course','CourseController@course');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::get('/contact', 'ContactController@contact');
+
+
+  Route::middleware(['auth'])->group(function () {
+
+    Route::get('/appointment', [
+        'uses' => 'AppointmentController@index'
+      ]);
+
+});
+
