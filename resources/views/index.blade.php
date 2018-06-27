@@ -8,18 +8,18 @@
     <link href="https://fonts.googleapis.com/css?family=Arapey|Cinzel|Encode+Sans+Condensed|Prata|Raleway|Source+Sans+Pro" rel="stylesheet">
 
     <!-- css -->
-    <link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('css/index.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('css/header.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('css/footer.css')}}">
-    <link rel="stylesheet" href="{{asset('')}}owl.carousel.min.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/header.css">
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.transitions.css">
 </head>
 <body>
 <header>
     <div>
-        <img src="{{asset('uploads/index/homepage_bg.jpg')}}" class="home_bg">
+        <img src="resources/homepage_bg.jpg" class="home_bg">
     </div>
     <div>
         <div class="uni_descr">
@@ -40,7 +40,7 @@
                 </button>
                 <a href="#">
                     <div class="logo_">
-                        <img src="{{asset('uploads/index/logo_nav.png')}}" id="logo">
+                        <img src="resources/logo_nav.png" id="logo">
                         <p class="text-center">University of <br> Kattegat</p>
                     </div>
                 </a>
@@ -69,7 +69,7 @@
                 </ul>
 
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">Log in <img src="{{asset('uploads/index/login.png')}}"></a></li>
+                    <li><a href="#">Log in <img src="resources/login.png"></a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
@@ -88,15 +88,15 @@
         </div>
         <div class="row">
             <div class="col-md-4 text-center">
-                <img src="{{asset('uploads/index/graduates.png')}}" class="why_us_img">
+                <img src="resources/graduates.png" class="why_us_img">
                 <p class="why_us_text"> All of our students gratuate, the rate of abandon is null.</p>
             </div>
             <div class="col-md-4 text-center">
-                <img src="{{asset('uploads/index/certificate.png')}}" class="why_us_img">
+                <img src="resources/certificate.png" class="why_us_img">
                 <p class="why_us_text"> Your diploma will be recognized everywhere on Earth.</p>
             </div>
             <div class="col-md-4 text-center">
-                <img src="{{asset('uploads/index/id-card.png')}}" class="why_us_img">
+                <img src="resources/id-card.png" class="why_us_img">
                 <p class="why_us_text"> By the time you finish your studies, you will already have work experience and a career granted.</p>
             </div>
         </div>
@@ -113,7 +113,7 @@
             <div class="col-md-4">
                 <div class="flip">
                     <div class="front">
-                        <img src="{{asset('uploads/index/nd008.jpg')}}">
+                        <img src="resources/nd008.jpg">
                         <p> Predictive Analitics For Business</p>
                     </div>
                     <div class="back">
@@ -124,7 +124,7 @@
             <div class="col-md-4">
                 <div class="flip">
                     <div class="front">
-                        <img src="{{asset('uploads/index/nd003.jpg')}}">
+                        <img src="resources/nd003.jpg">
                         <p>Become an iOS developer</p>
                     </div>
                     <div class="back">
@@ -135,7 +135,7 @@
             <div class="col-md-4">
                 <div class="flip">
                     <div class="front">
-                        <img src="{{asset('uploads/index/nd019.jpg')}}">
+                        <img src="resources/nd019.jpg">
                         <p>React</p>
                     </div>
                     <div class="back">
@@ -161,7 +161,7 @@
                 <div id="testimonial-slider" class="owl-carousel">
                     <div class="testimonial">
                         <div class="pic">
-                            <img src="{{asset('uploads/index/stud3.jpg')}}">
+                            <img src="resources/stud3.jpg">
                         </div>
                         <h3 class="title">William</h3>
                         <span class="post">Economist</span>
@@ -171,7 +171,7 @@
                     </div>
                     <div class="testimonial">
                         <div class="pic">
-                            <img src="{{asset('uploads/index/stud1.jpg')}}">
+                            <img src="resources/stud1.jpg">
                         </div>
                         <h3 class="title">Christina</h3>
                         <span class="post">Web Developer</span>
@@ -181,7 +181,7 @@
                     </div>
                     <div class="testimonial">
                         <div class="pic">
-                            <img src="{{asset('uploads/index/stud2.jpg')}}">
+                            <img src="resources/stud2.jpg">
                         </div>
                         <h3 class="title">Josh</h3>
                         <span class="post">Web Designer</span>
@@ -224,13 +224,13 @@
                 <hr class="hr">
 
                 <a href="#">
-                    <img src="{{asset('uploads/index/facebook-logo-button.png')}}" id="facebook_footer">
+                    <img src="resources/facebook-logo-button.png" id="facebook_footer">
                 </a>
                 <a href="#" >
-                    <img src="{{asset('uploads/index/instagram-logo.png')}}" id="instagram_footer">
+                    <img src="resources/instagram-logo.png" id="instagram_footer">
                 </a>
                 <a href="#" >
-                    <img src="{{asset('uploads/index/twitter-logo-button.png')}}" id="twitter_footer">
+                    <img src="resources/twitter-logo-button.png" id="twitter_footer">
                 </a>
 
             </div>
@@ -240,12 +240,12 @@
 </footer>
 <!-- Scripts -->
 <!--<script type="text/javascript" src="js/jquery.js"></script>-->
-<script type="text/javascript" src="{{asset('https://code.jquery.com/jquery-1.12.0.min.js')}}"></script>
-<script type="text/javascript" src="{{asset('js/bootstrap.js')}}"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script type="text/javascript" src="bootstrap/bootstrap.js"></script>
 
-<script src="{{asset('js/index/flip.min.js')}}"></script>
+<script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
 
-<script type="text/javascript" src="{{asset('https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js')}}"></script>
-<script type="text/javascript" src="{{asset('js/index.js')}}"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+<script type="text/javascript" src="js/homepage_js.js"></script>
 </body>
 </html>
