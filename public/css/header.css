@@ -1,0 +1,194 @@
+.home_bg{
+    width: 100%;
+    z-index: -5;
+    filter: brightness(50%);
+}
+.uni_descr{
+    width: 50%;
+    position: absolute;
+    top:55%;
+    left: 25%;
+    z-index: 10;
+}
+.name{
+    font-family: 'Arapey',serif;
+    font-size: 5vw;
+    color:#ffffff;
+}
+.descr:before{
+    content: '';
+    width: 10%;
+    border-bottom: 2px solid #ffffff;
+    border-bottom-left-radius: 70%;
+    position: absolute;
+    left: 10%;
+    top: 80%;
+    z-index: 10;
+}
+.descr:after{
+    content: '';
+    width: 10%;
+    border-bottom: 2px solid #ffffff;
+    border-bottom-right-radius: 70%;
+    position: absolute;
+    right: 10%;
+    top: 80%;
+    z-index: 10;
+}
+.descr{
+    font-family: 'Arapey',serif;
+    font-size: 1.8vw;
+    color: #ffffff;
+}
+
+.logo_{
+    font-family: 'Cinzel',serif;
+    font-size: 1.2vw;
+    color:#ffffff;
+}
+.logo_ > img, .logo_>p {
+    float: left;
+}
+#logo:hover{
+    text-decoration: none;
+    color: white;
+}
+
+.nav .navbar-nav > li{
+    margin: 2%;
+}
+.navbar-default .navbar-header{
+    margin: 2% 4%;
+}
+.navbar-default {
+    background-color: transparent;
+    border-color: rgba(255,255,255,0.2);
+    height: 15%;
+}
+.navbar-default .navbar-brand {
+    color: #777;
+    margin: 5%;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color: #5e5e5e;
+    background-color: transparent;
+}
+.navbar-default .navbar-text {
+    color: #777;
+}
+.navbar-default .navbar-nav{
+    margin-left: 5%;
+}
+.navbar-default .navbar-nav > li{
+    margin: 3% 5px;
+}
+.navbar-default .navbar-nav > li > a {
+    color: #ffffff;
+    font-family: 'Cinzel',serif;
+    font-size: 1.5vw;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: red;
+    transition: .4s ease-in-out;
+    transform: scale(1.3);
+
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+    color: #ffffff;
+    background-color: rgba(0,0,0,0.2);
+
+}
+.navbar-default .navbar-nav > .disabled > a,
+.navbar-default .navbar-nav > .disabled > a:hover,
+.navbar-default .navbar-nav > .disabled > a:focus {
+    color: #ccc;
+    background-color: transparent;
+}
+.navbar-default .navbar-toggle {
+    border-color: #ddd;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+    background-color: #ddd;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #888;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+    border-color: #e7e7e7;
+}
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+    color: #555;
+    background-color: #e7e7e7;
+}
+
+.navbar-default .navbar-right{
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-left: -30px;
+    margin-right: -10px;
+}
+
+.navbar-sticky {
+    background-color: rgba(0,0,0,0.5);
+}
+.dropdown-menu {
+    position: absolute;
+    top: 225%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 260px;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    text-align: left;
+    list-style: none;
+    background-color: rgba(0,0,0,0.6);
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0, 0, 0, .15);
+    border-radius: 4px;
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    width: 450px !important;
+    height: 250px !important;
+}
+.dropdown-menu.pull-right {
+    right: 0;
+    left: auto;
+}
+.dropdown-menu .divider {
+    height: 1px;
+    margin: 9px 0;
+    overflow: hidden;
+    background-color: rgba(255,255,255,0.1);
+}
+.dropdown-menu > li > a {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: normal;
+    line-height: 1.42857143;
+    color: #ffffff;
+    white-space: nowrap;
+    font-family: 'Cinzel', serif;
+    font-size: 1.2vw;
+    margin-left: 0;
+}
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+    color: red;
+    text-decoration: none;
+    background-color: transparent;
+    margin-left: 5%;
+    transition: .4s ease-in-out;
+}
