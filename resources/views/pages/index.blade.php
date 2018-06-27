@@ -12,9 +12,9 @@
     <link rel="stylesheet" type="text/css" href="{{asset('css/index.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/header.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/footer.css')}}">
-    <link rel="stylesheet" href="{{asset('')}}owl.carousel.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.transitions.css">
+    <link rel="stylesheet" href="{{asset('css/index/owl.carousel.min.css')}}">
+    <link rel="stylesheet" href="{{asset('css/index/owl.theme.min.css')}}">
+    <link rel="stylesheet" href="{{asset('css/index/owl.transitions.css')}}">
 </head>
 <body>
 <header>
@@ -238,14 +238,15 @@
     </div>
 
 </footer>
+
+
 <!-- Scripts -->
 <!--<script type="text/javascript" src="js/jquery.js"></script>-->
-<script type="text/javascript" src="{{asset('https://code.jquery.com/jquery-1.12.0.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/jquery.js')}}"></script>
 <script type="text/javascript" src="{{asset('js/bootstrap.js')}}"></script>
-
 <script src="{{asset('js/index/flip.min.js')}}"></script>
 
-<script type="text/javascript" src="{{asset('https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/index/owl.carousel.min.js')}}"></script>
 <script type="text/javascript" src="{{asset('js/index.js')}}"></script>
 </body>
 </html>
