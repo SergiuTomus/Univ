@@ -29,4 +29,7 @@ Route::get('/contact', 'ContactController@contact');
       ]);
 
 });
+  Route::get('/',function (){
+      return view('pages.index');
+  });
 
