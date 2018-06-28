@@ -21,6 +21,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/contact', 'ContactController@contact');
 
+Route::get('/teachers', 'TeachersController@teachers');
+
 
   Route::middleware(['auth'])->group(function () {
 
