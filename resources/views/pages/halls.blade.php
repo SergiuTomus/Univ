@@ -8,15 +8,15 @@
 
 </style>
 	
-   <link rel="stylesheet" type="text/css" href="css/halls.css">
+   <link rel="stylesheet" type="text/css" href="{{asset('css/halls.css')}}">
 	<link href="https://fonts.googleapis.com/css?family=Arapey|Cinzel|Encode+Sans+Condensed|Prata|Raleway|Source+Sans+Pro" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Arapey|Cinzel|Encode+Sans+Condensed|Prata|Raleway|Source+Sans+Pro" rel="stylesheet">
 
     <!-- css -->
-    <link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="css/index.css">
-    <link rel="stylesheet" type="text/css" href="css/header.css">
-    <link rel="stylesheet" type="text/css" href="css/footer.css">
+    <link rel="stylesheet" type="text/css" href="{{asset('bootstrap/bootstrap.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/index.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/header.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/footer.css')}}">
 
 	<title>UK | Halls</title>
 </head>
@@ -26,7 +26,7 @@
 	
     
 
-    <nav class="navbar navbar-default navbar-default2 navbar-fixed-top" id="sticky"  >
+    <nav class="navbar navbar-default navbar-fixed-top" id="sticky"  >
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -468,8 +468,8 @@
 
 </footer>
 <!-- Scripts -->
-<script type="text/javascript" src="js/jquery.js"></script>
-<script type="text/javascript" src="bootstrap/bootstrap.js"></script>
-<script type="text/javascript" src="js/homepage_js.js"></script>
+<script type="text/javascript" src="{{asset('js/jquery.js')}}"></script>
+<script type="text/javascript" src="{{asset('bootstrap/bootstrap.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/index.js')}}"></script>
 </body>
 </html>
