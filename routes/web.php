@@ -27,7 +27,7 @@ Route::get('/teachers', 'TeachersController@teachers');
   Route::middleware(['auth'])->group(function () {
 
     Route::get('/appointment', [
-        'uses' => 'AppointmentController@index'
+        'uses' => 'AppointmentController@appointment'
       ]);
 
 });

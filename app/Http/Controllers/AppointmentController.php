@@ -11,7 +11,7 @@ class AppointmentController extends Controller
         $this->middleware('auth');
     }
 
-    public function index(){
+    public function appointment(){
         return view('pages.appointment');
     }
 }
