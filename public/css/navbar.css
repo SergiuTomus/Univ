@@ -1,46 +1,3 @@
-.home_bg{
-    width: 100%;
-    z-index: -5;
-    filter: brightness(50%);
-}
-.uni_descr{
-    width: 50%;
-    position: absolute;
-    top:55%;
-    left: 25%;
-    z-index: 10;
-}
-.name{
-    font-family: 'Arapey',serif;
-    font-size: 5vw;
-    color:#ffffff;
-}
-.descr:before{
-    content: '';
-    width: 10%;
-    border-bottom: 2px solid #ffffff;
-    border-bottom-left-radius: 70%;
-    position: absolute;
-    left: 10%;
-    top: 80%;
-    z-index: 10;
-}
-.descr:after{
-    content: '';
-    width: 10%;
-    border-bottom: 2px solid #ffffff;
-    border-bottom-right-radius: 70%;
-    position: absolute;
-    right: 10%;
-    top: 80%;
-    z-index: 10;
-}
-.descr{
-    font-family: 'Arapey',serif;
-    font-size: 1.8vw;
-    color: #ffffff;
-}
-
 .logo_{
     font-family: 'Cinzel',serif;
     font-size: 1.2vw;
@@ -49,6 +6,7 @@
 .logo_ > img, .logo_>p {
     float: left;
 }
+
 #logo:hover{
     text-decoration: none;
     color: white;
