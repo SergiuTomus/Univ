@@ -31,4 +31,7 @@ Route::get('/teachers', 'TeachersController@teachers');
       ]);
 
 });
+  Route::get('/',function (){
+      return view('pages.index');
+  });
 

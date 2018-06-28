@@ -241,11 +241,9 @@
 
 
 <!-- Scripts -->
-<!--<script type="text/javascript" src="js/jquery.js"></script>-->
 <script type="text/javascript" src="{{asset('js/jquery.js')}}"></script>
 <script type="text/javascript" src="{{asset('js/bootstrap.js')}}"></script>
 <script src="{{asset('js/index/flip.min.js')}}"></script>
-
 <script type="text/javascript" src="{{asset('js/index/owl.carousel.min.js')}}"></script>
 <script type="text/javascript" src="{{asset('js/index.js')}}"></script>
 </body>
