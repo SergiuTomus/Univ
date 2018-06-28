@@ -40,7 +40,7 @@
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="/auth">Log in <img src="{{asset('uploads/index/login.png')}}"></a></li>
+                <li><a href="/home">Log in <img src="{{asset('uploads/index/login.png')}}"></a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
