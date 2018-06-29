@@ -1,11 +1,8 @@
 $(document).ready(function() {
 
 
-
-   
-      
     $('#calendar').fullCalendar({
-        events: function(start, end, timezone, callback) {
+        /*events: function(start, end, timezone, callback) {
           $.ajax({
             url: allAppointmentsRoute,
             dataType: 'json',
@@ -23,6 +20,19 @@ $(document).ready(function() {
               callback(events);
             }
           });
+        } */
+
+        dayClick: function(date, jsEvent, view) {
+
+          alert('Clicked on: ' + date.format());
+
+         // alert('Coordinates: ' + jsEvent.pageX + ',' + jsEvent.pageY);
+      
+          //alert('Current view: ' + view.name);
+      
+          // change the day's background color just for fun
+          $(this).css('background-color', '#ccffff');
+      
         }
       });
 });

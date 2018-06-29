@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset='utf-8' />
+    <link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.css">
     <link href="{{asset('css/appointment/fullcalendar.min.css')}}" rel='stylesheet'>
     <link href="{{asset('css/appointment/fullcalendar.print.min.css')}}" media='print'>
     <style>
@@ -20,6 +21,7 @@
 
     </style>
   </head>
+
   <body>
 
     <div id='calendar'></div>
