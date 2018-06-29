@@ -7,7 +7,7 @@
                 <div id="testimonial-slider" class="owl-carousel">
                     <div class="testimonial">
                         <div class="pic">
-                            <img src="{{asset('uploads/index/stud3.jpg')}}">
+                            <img src="{{asset('resources/index/stud3.jpg')}}">
                         </div>
                         <h3 class="title">William</h3>
                         <span class="post">Economist</span>
@@ -17,7 +17,7 @@
                     </div>
                     <div class="testimonial">
                         <div class="pic">
-                            <img src="{{asset('uploads/index/stud1.jpg')}}">
+                            <img src="{{asset('resources/index/stud1.jpg')}}">
                         </div>
                         <h3 class="title">Christina</h3>
                         <span class="post">Web Developer</span>
@@ -27,7 +27,7 @@
                     </div>
                     <div class="testimonial">
                         <div class="pic">
-                            <img src="{{asset('uploads/index/stud2.jpg')}}">
+                            <img src="{{asset('resources/index/stud2.jpg')}}">
                         </div>
                         <h3 class="title">Josh</h3>
                         <span class="post">Web Designer</span>

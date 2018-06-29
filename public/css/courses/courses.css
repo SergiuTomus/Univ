@@ -1,0 +1,45 @@
+.custom-container{
+    background-color: rgba(0,0,0,0.5);
+    margin-top: -5%;
+}
+.title{
+    font-family: 'Cinzel', serif;
+    font-size: 4.7vw;
+    color:#000000;
+    padding-top: 12%;
+}
+.prof_picker{
+    border: 2px solid rgba(0,0,0,0.6);
+    border-radius: 10%;
+    background-color: rgba(255,255,255,0.5);
+    margin: 5% 0;
+}
+.sub_title{
+    font-family: 'Cinzel', serif;
+    font-size: 1.4vw;
+}
+.courses{
+    border: 1px solid rgba(0,0,0,0.6);
+    background-color: rgba(255,255,255,0.5);
+    margin: 5% 0;
+}
+ul{
+    list-style: none;
+}
+ul li{
+    margin: 3% 0;
+}
+ul li a{
+    text-decoration: none;
+    font-family: 'Cinzel', serif;
+    font-size: 1.4vw;
+    color: #000000;
+}
+ul li a:hover{
+    text-decoration: none;
+    color: red;
+}
+.course_name{
+    font-family: 'Arapey', serif;
+    font-size: 1.6vw;
+}

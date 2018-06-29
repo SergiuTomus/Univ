@@ -6,7 +6,7 @@
         <div class="col-md-4">
             <div class="flip">
                 <div class="front">
-                    <img src="{{asset('uploads/index/nd008.jpg')}}">
+                    <img src="{{asset('resources/index/nd008.jpg')}}">
                     <p> Predictive Analitics For Business</p>
                 </div>
                 <div class="back">
@@ -17,7 +17,7 @@
         <div class="col-md-4">
             <div class="flip">
                 <div class="front">
-                    <img src="{{asset('uploads/index/nd003.jpg')}}">
+                    <img src="{{asset('resources/index/nd003.jpg')}}">
                     <p>Become an iOS developer</p>
                 </div>
                 <div class="back">
@@ -28,7 +28,7 @@
         <div class="col-md-4">
             <div class="flip">
                 <div class="front">
-                    <img src="{{asset('uploads/index/nd019.jpg')}}">
+                    <img src="{{asset('resources/index/nd019.jpg')}}">
                     <p>React</p>
                 </div>
                 <div class="back">

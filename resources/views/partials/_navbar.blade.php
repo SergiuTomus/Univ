@@ -11,7 +11,7 @@
             </button>
             <a href="/">
                 <div class="logo_">
-                    <img src="{{asset('uploads/index/logo_nav.png')}}" id="logo">
+                    <img src="{{asset('resources/index/logo_nav.png')}}" id="logo">
                     <p class="text-center">University of <br> Kattegat</p>
                 </div>
             </a>
@@ -40,7 +40,7 @@
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="/home">Log in <img src="{{asset('uploads/index/login.png')}}"></a></li>
+                <li><a href="/home">Log in <img src="{{asset('resources/index/login.png')}}"></a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
