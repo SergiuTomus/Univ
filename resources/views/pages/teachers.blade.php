@@ -129,7 +129,8 @@
                                                 <i class="fa fa-google"></i>
                                             </a>
                                         </li>
-                                    </ul>                         
+                                    </ul> 
+                                    <a href="#" class="btn btn-primary btn-sm"><i>Teacher Page</i></a>                        
                                 </div>                           
                             </div>
                         </div>
@@ -180,6 +181,7 @@
                                             </a>
                                         </li>
                                     </ul>
+                                    <a href="#" class="btn btn-primary btn-sm"><i>Teacher Page</i></a>  
                                 </div>
                             </div>
                         </div>
@@ -229,6 +231,7 @@
                                             </a>
                                         </li>
                                     </ul>
+                                    <a href="#" class="btn btn-primary btn-sm"><i>Teacher Page</i></a>  
                                 </div>
                             </div>
                         </div>
@@ -279,6 +282,7 @@
                                             </a>
                                         </li>
                                     </ul>
+                                    <a href="#" class="btn btn-primary btn-sm"><i>Teacher Page</i></a>  
                                 </div>
                             </div>
                         </div>
@@ -329,6 +333,7 @@
                                             </a>
                                         </li>
                                     </ul>
+                                    <a href="#" class="btn btn-primary btn-sm"><i>Teacher Page</i></a>  
                                 </div>
                             </div>
                         </div>
@@ -379,6 +384,7 @@
                                             </a>
                                         </li>
                                     </ul>
+                                    <a href="#" class="btn btn-primary btn-sm"><i>Teacher Page</i></a>  
                                 </div>
                             </div>
                         </div>
