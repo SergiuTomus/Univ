@@ -1,13 +1,23 @@
+/* FontAwesome for working BootSnippet :> */
 
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
-
 #team {
-    background: gray !important;
+    background: #eee !important;
 }
 
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color:red;
+    border-color:red;
+    box-shadow: none;
+    outline: none;
+}
 
-
-
+.btn-primary {
+    color: #fff;
+    background-color: red;
+    border-color: red;
+}
 
 section {
     padding: 60px 0;
@@ -15,9 +25,8 @@ section {
 
 section .section-title {
     text-align: center;
-    color: black;
+    color:red;
     margin-bottom: 50px;
-    text-transform: uppercase;
     font-family: 'Cinzel',serif;
     font-weight:  bold;
     color: black;
@@ -25,7 +34,7 @@ section .section-title {
 
 #team .card {
     border: none;
-    background: white;
+    background: #ffffff;
 }
 
 .image-flip:hover .backside,
@@ -107,42 +116,19 @@ section .section-title {
 
 .backside .card a {
     font-size: 18px;
-    color: #007b5e !important;
+    color: red;
 }
 
 .frontside .card .card-title,
 .backside .card .card-title {
-    color: #343a40 !important;
+    color: red;
+    font-family: 'Cinzel',serif;
+    font-weight:  bold;
+    color: black;
 }
 
 .frontside .card .card-body img {
     width: 120px;
     height: 120px;
     border-radius: 50%;
-}
-
-h4.card-title{
-    font-family: 'Cinzel',serif;
-    font-weight:  bold;
-    color: black;
-
-
-}
-p.card-text{
-    font-family: 'Arapey',serif;
-    font-weight:  bold;
-}
-a.btn-primary,
-a.btn-primary:hover{
-    border: none;
-    background: #dc3545;
-}
-i{
-    color: black;
-    font-family: 'Arapey',serif;
-    font-weight:  bold;
-
-}
-.container{
-    margin-top: 5%;
 }
