@@ -9,18 +9,20 @@
             <!-- Team member -->
             @foreach($halls as $hall)
 
+            
                 
 
                  <div class="col-xs-12 col-sm-6 col-md-3">
+           
                 <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
                     <div class="mainflip">
                         <div class="frontside">
                             <div class="card">
                                 <div class="card-body text-center">
-                                    <p><img class=" img-fluid" src="img/A1.jpg" alt="card image"></p>
-                                    <h4 class="card-title"> {{$hall->name}}<br> No.Seats: {{$hall->no_seats}}</h4>
+                                    <p><img class=" img-fluid" src="{{$hall->path}}" alt="card image"> </p>
+                                    <h4 class="card-title"> {{$hall->name}}<br> No.Seats: {{$hall->no_seats}} <br> Building: {{$hall->building}}</h4>
 
-                                  <p class="card-text">This is basic card with image on top, title, description and button. </p>
+                                  
                                     
                                 </div>
                             </div>
@@ -29,7 +31,7 @@
                             <div class="card">
                                 <div class="card-body text-center mt-4">
                                    
-                                    <h4 class="card-title"> {{$hall->name}}<br>No.Seats: {{$hall->no_seats}}</h4>                      
+                                    <h4 class="card-title">{{$hall->name}}</h4>                      
                                    
                                     <p class="card-text">This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.</p>
                                     

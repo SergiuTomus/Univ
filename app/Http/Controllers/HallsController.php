@@ -17,10 +17,10 @@ class HallsController extends Controller
     public function halls()
     {
     
-        $halls=	Halls::leftjoin('media','media.entity_id', '=' , 'halls.id')
-        ->select('halls.*')
+        $halls=	Halls::leftjoin('media','halls.id', '=' , 'media.entity_id')
+        ->select('halls.*','media.path')
         ->get();
-    var_dump($halls);
+    
 
                 return view('pages.halls',array('halls' => $halls));
 
