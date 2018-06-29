@@ -23,6 +23,7 @@ Route::get('/contact', 'ContactController@contact');
 
 Route::get('/teachers', 'TeachersController@teachers');
 
+Route::get('halls_page', 'HallsPageController@halls_page');
 
   Route::middleware(['auth'])->group(function () {
 

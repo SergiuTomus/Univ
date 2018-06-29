@@ -135,7 +135,7 @@ p.card-text{
 a.btn-primary,
 a.btn-primary:hover{
     border: none;
-    background: #dc3545;
+    background: red;
 }
 i{
     color: black;

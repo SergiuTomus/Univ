@@ -22,8 +22,6 @@
                                     <p><img class=" img-fluid" src="{{$hall->path}}" alt="card image"> </p>
                                     <h4 class="card-title"> {{$hall->name}}<br> No.Seats: {{$hall->no_seats}} <br> Building: {{$hall->building}}</h4>
 
-                                  
-                                    
                                 </div>
                             </div>
                         </div>
@@ -35,7 +33,7 @@
                                    
                                     <p class="card-text">This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.This is basic card with image on top, title, description and button.</p>
                                     
-                                    <a href="#" class="btn btn-primary btn-sm" ><i>View</i></a>
+                                    <a href="#"; class="btn btn-primary btn-sm" ><i>View</i></a>
 
                                 </div>
                             </div>
