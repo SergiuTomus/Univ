@@ -8,11 +8,6 @@ use App\Media;
 
 class HallsController extends Controller
 {
-  
-
-   /* public function halls(){
-        return view('pages.halls');
-    }*/
 
     public function halls()
     {
