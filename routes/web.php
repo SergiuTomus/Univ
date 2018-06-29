@@ -28,7 +28,12 @@ Route::get('/teachers', 'TeachersController@teachers');
 
     Route::get('/appointment', [
         'uses' => 'AppointmentController@appointment'
-      ]);
+    ]);
+
+    Route::get('/getAppointments', [
+      'as' => 'allAppointments',
+      'uses' => 'AppointmentController@getAppointments'
+    ]);
 
 });
   Route::get('/',function (){
