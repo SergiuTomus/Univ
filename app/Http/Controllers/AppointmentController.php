@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Appointments; 
 
 class AppointmentController extends Controller
 {
@@ -11,7 +12,13 @@ class AppointmentController extends Controller
         $this->middleware('auth');
     }
 
-    public function index(){
+    public function appointment(){
         return view('pages.appointment');
+    }
+
+    public function getAppointments() 
+    {
+        $appointments = Appointments::all();
+        return response()->json(array('appointments'=> $appointments), 200);
     }
 }

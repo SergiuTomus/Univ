@@ -28,8 +28,13 @@ Route::get('halls_page', 'HallsPageController@halls_page');
   Route::middleware(['auth'])->group(function () {
 
     Route::get('/appointment', [
-        'uses' => 'AppointmentController@index'
-      ]);
+        'uses' => 'AppointmentController@appointment'
+    ]);
+
+    Route::get('/getAppointments', [
+      'as' => 'allAppointments',
+      'uses' => 'AppointmentController@getAppointments'
+    ]);
 
 });
   Route::get('/',function (){
