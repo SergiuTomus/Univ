@@ -1,15 +1,15 @@
 @extends('main')
-
-    @section('index_css_files')
+    @section('title', 'Home')
+    @section('stylesheets')
     <link rel="stylesheet" href="{{asset('css/index/owl.carousel.min.css')}}">
     <link rel="stylesheet" href="{{asset('css/index/owl.theme.min.css')}}">
     <link rel="stylesheet" href="{{asset('css/index/owl.transitions.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/index/index.css')}}">
     @endsection
 
-    @section('index_background_pic')
+    @section('background_pic')
     <div>
-        <img src="{{asset('uploads/index/homepage_bg.jpg')}}" class="home_bg">
+        <img src="{{asset('resources/index/homepage_bg.jpg')}}" class="home_bg">
     </div>
     <div>
         <div class="uni_descr">
@@ -19,7 +19,7 @@
     </div>
     @endsection
 
-@section('index_content')
+@section('content')
 <div class="container">
 
     @include('partials.index_partials._what_makes_us_different')

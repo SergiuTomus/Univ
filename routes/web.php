@@ -12,7 +12,9 @@
 */
 
 Route::get('halls','HallsController@halls');
-Route::get('course','CourseController@course');
+Route::get('/courses/all','CourseController@getAllCourses');
+Route::get('/teacher-courses/{id}','CourseController@getAllTeachers')->name('courses.show');
+
 
 Auth::routes();
 
@@ -24,6 +26,7 @@ Route::get('/contact', 'ContactController@contact');
 Route::get('/teachers', 'TeachersController@teachers');
 
 Route::get('/hall/{name}', 'HallsPageController@hall')->name('hall.show');
+
 
   Route::middleware(['auth'])->group(function () {
 

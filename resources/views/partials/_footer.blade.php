@@ -19,13 +19,13 @@
                 <hr class="hr">
 
                 <a href="#">
-                    <img src="{{asset('uploads/index/facebook-logo-button.png')}}" id="facebook_footer">
+                    <img src="{{asset('resources/index/facebook-logo-button.png')}}" id="facebook_footer">
                 </a>
                 <a href="#" >
-                    <img src="{{asset('uploads/index/instagram-logo.png')}}" id="instagram_footer">
+                    <img src="{{asset('resources/index/instagram-logo.png')}}" id="instagram_footer">
                 </a>
                 <a href="#" >
-                    <img src="{{asset('uploads/index/twitter-logo-button.png')}}" id="twitter_footer">
+                    <img src="{{asset('resources/index/twitter-logo-button.png')}}" id="twitter_footer">
                 </a>
 
             </div>
