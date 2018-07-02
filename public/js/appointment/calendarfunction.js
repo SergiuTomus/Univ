@@ -25,7 +25,8 @@ $(document).ready(function() {
         dayClick: function(date, jsEvent, view) {
 
           alert('Clicked on: ' + date.format());
-
+          
+          $('#myModal').modal('show');
          // alert('Coordinates: ' + jsEvent.pageX + ',' + jsEvent.pageY);
       
           //alert('Current view: ' + view.name);
