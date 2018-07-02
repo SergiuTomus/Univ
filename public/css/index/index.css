@@ -45,7 +45,7 @@ h3{
     font-family: 'Cinzel', serif;
     height: 299px;
     width: 300px;
-    margin: 0 auto;
+    margin: 10% auto;
     text-align: center;
 }
 .flip img {
@@ -57,7 +57,6 @@ h3{
     background: red;
     color: #fff;
     text-align: center;
-    margin-top: 5%;
 }
 .front > p {
     text-align: center;
@@ -66,7 +65,8 @@ h3{
 .back > p{
     font-size: 1.2vw;
     text-align: center;
-    margin: 2%;
+    margin: 5%;
+    padding-top: 3%;
 }
 .flip{
     margin-bottom: 5%;
@@ -138,7 +138,7 @@ h3{
 }
 .owl-theme .owl-controls{ margin-top: 0; }
 .owl-theme .owl-controls .owl-page span{
-    background: #fff;
+    background: rgba(0,0,0,0.4);
     opacity: 0.8;
     transition: all 0.3s ease 0s;
 }

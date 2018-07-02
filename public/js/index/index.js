@@ -1,46 +1,25 @@
-
-$(document).scroll(function () {
-    var x=$(this).scrollTop();
-    if(x>5){
-        $("#sticky").addClass('navbar-sticky');
-
-    } else {
-        $("#sticky").removeClass('navbar-sticky');
-    }
-});
-
-
-$('ul.nav li.dropdown').hover(function() {
-    $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
-}, function() {
-    $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
-});
-
-
-
-
 $("document").ready(function(){
     $('#facebook_footer').mouseenter(function(){
-        $(this).attr('src','resources/facebook-hover.png');
+        $(this).attr('src','resources/index/facebook-hover.png');
     });
     $('#facebook_footer').mouseleave(function(){
-        $(this).attr('src','resources/facebook-logo-button.png');
+        $(this).attr('src','resources/index/facebook-logo-button.png');
     });
 });
 $("document").ready(function(){
     $('#instagram_footer').mouseenter(function(){
-        $(this).attr('src','resources/instagram-hover.png');
+        $(this).attr('src','resources/index/instagram-hover.png');
     });
     $('#instagram_footer').mouseleave(function(){
-        $(this).attr('src','resources/instagram-logo.png');
+        $(this).attr('src','resources/index/instagram-logo.png');
     });
 });
 $("document").ready(function(){
     $('#twitter_footer').mouseenter(function(){
-        $(this).attr('src','resources/twitter-hover.png');
+        $(this).attr('src','resources/index/twitter-hover.png');
     });
     $('#twitter_footer').mouseleave(function(){
-        $(this).attr('src','resources/twitter-logo-button.png');
+        $(this).attr('src','resources/index/twitter-logo-button.png');
     });
 });
 

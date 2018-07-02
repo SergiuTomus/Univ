@@ -2,7 +2,7 @@
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 
 #team {
-    background: #eee !important;
+    background: gray !important;
 }
 
 
@@ -135,7 +135,7 @@ p.card-text{
 a.btn-primary,
 a.btn-primary:hover{
     border: none;
-    background: #dc3545;
+    background: red;
 }
 i{
     color: black;
