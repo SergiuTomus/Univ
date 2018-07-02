@@ -12,7 +12,9 @@
 */
 
 Route::get('halls','HallsController@halls');
-Route::get('course','CourseController@course');
+Route::get('/courses/all','CourseController@getAllCourses');
+Route::get('/teacher-courses/{id}','CourseController@getAllTeachers')->name('courses.show');
+
 
 Auth::routes();
 

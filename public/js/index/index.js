@@ -1,25 +1,25 @@
 $("document").ready(function(){
     $('#facebook_footer').mouseenter(function(){
-        $(this).attr('src','resources/facebook-hover.png');
+        $(this).attr('src','resources/index/facebook-hover.png');
     });
     $('#facebook_footer').mouseleave(function(){
-        $(this).attr('src','resources/facebook-logo-button.png');
+        $(this).attr('src','resources/index/facebook-logo-button.png');
     });
 });
 $("document").ready(function(){
     $('#instagram_footer').mouseenter(function(){
-        $(this).attr('src','resources/instagram-hover.png');
+        $(this).attr('src','resources/index/instagram-hover.png');
     });
     $('#instagram_footer').mouseleave(function(){
-        $(this).attr('src','resources/instagram-logo.png');
+        $(this).attr('src','resources/index/instagram-logo.png');
     });
 });
 $("document").ready(function(){
     $('#twitter_footer').mouseenter(function(){
-        $(this).attr('src','resources/twitter-hover.png');
+        $(this).attr('src','resources/index/twitter-hover.png');
     });
     $('#twitter_footer').mouseleave(function(){
-        $(this).attr('src','resources/twitter-logo-button.png');
+        $(this).attr('src','resources/index/twitter-logo-button.png');
     });
 });
 
