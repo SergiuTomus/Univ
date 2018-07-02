@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="{{asset('css/index/index.css')}}">
     @endsection
 
-    @section('index_background_pic')
+    @section('background_pic')
     <div>
         <img src="{{asset('resources/index/homepage_bg.jpg')}}" class="home_bg">
     </div>
@@ -19,7 +19,7 @@
     </div>
     @endsection
 
-@section('index_content')
+@section('content')
 <div class="container">
 
     @include('partials.index_partials._what_makes_us_different')
