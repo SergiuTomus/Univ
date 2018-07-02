@@ -24,6 +24,7 @@ Route::get('/contact', 'ContactController@contact');
 Route::get('/teachers', 'TeachersController@teachers');
 
 
+
   Route::middleware(['auth'])->group(function () {
 
     Route::get('/appointment', [
