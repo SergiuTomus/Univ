@@ -33,7 +33,7 @@
                         <li><a href="/faculties">All faculties available</a></li>
                     </ul>
                 </li>
-                <li><a href="/courses"> Courses </a></li>
+                <li><a href="/courses/all"> Courses </a></li>
                 <li><a href="/teachers"> Our professors </a></li>
                 <li><a href="/halls"> Halls </a></li>
                 <li><a href="/contact"> Contact</a></li>

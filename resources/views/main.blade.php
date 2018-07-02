@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-    <title> UK |</title>
+    <title> UK | @yield('title')</title>
 
     <!-- fonts -->
     <link href="https://fonts.googleapis.com/css?family=Arapey|Cinzel|Encode+Sans+Condensed|Prata|Raleway|Source+Sans+Pro" rel="stylesheet">
@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="{{asset('css/footer.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/navbar.css')}}">
 
-    @yield('index_css_files')
+    @yield('stylesheets')
 
 </head>
 <body>

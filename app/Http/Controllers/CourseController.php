@@ -10,20 +10,38 @@ use App\Courses;
 
 class CourseController extends Controller
 {
-    public function getAllTeachers(){
-
-        $teachers = User::all()
+    public function getAllCourses(){
+        $teachers = User::select('*')
             ->where('users.role','=','2')
             ->get();
-        return view('pages.courses',array('teachers'=> $teachers));
+
+        $courses = Courses::select('*')
+            ->get();
+
+        return view('pages.courses',
+            array(
+                'teachers'=> $teachers,
+                'courses' => $courses
+            )
+        );
     }
-    public function course()
-    {
+    public function getAllTeachers($id){
+
+        $teachers = User::select('*')
+            ->where('users.role','=','2')
+            ->get();
+
         $courses = Courses::leftjoin('users','users.id','=','courses.user_id')
-            ->where('users.role','=','2')
+            ->where('courses.user_id','=',$id)
             ->get();
-        return view('pages.courses',array('courses'=>$courses));
 
+        return view('pages.courses',
+            array(
+                'teachers'=> $teachers,
+                'courses' => $courses
+            )
+        );
     }
+
 }
 ?>

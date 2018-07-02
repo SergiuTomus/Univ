@@ -1,45 +1,60 @@
-.custom-container{
-    background-color: rgba(0,0,0,0.5);
-    margin-top: -5%;
-}
-.title{
-    font-family: 'Cinzel', serif;
-    font-size: 4.7vw;
+.logo_{
+    font-family: 'Cinzel',serif;
+    font-size: 1.2vw;
     color:#000000;
-    padding-top: 12%;
 }
+.navbar-default .navbar-nav > li > a {
+    color: #000000;
+    font-family: 'Cinzel',serif;
+    font-size: 1.5vw;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+    color: #000000;
+    background-color: rgba(0,0,0,0.2);
+
+}
+
+.page_title{
+    font-family: 'Cinzel',serif;
+    font-size: 4.5vw;
+    color:black;
+    margin-top: 10%;
+    margin-bottom: 5%;
+}
+
 .prof_picker{
-    border: 2px solid rgba(0,0,0,0.6);
-    border-radius: 10%;
-    background-color: rgba(255,255,255,0.5);
-    margin: 5% 0;
+    background-color: rgba(0,0,0,0.2);
 }
-.sub_title{
-    font-family: 'Cinzel', serif;
-    font-size: 1.4vw;
-}
-.courses{
-    border: 1px solid rgba(0,0,0,0.6);
-    background-color: rgba(255,255,255,0.5);
-    margin: 5% 0;
+.prof_picker > h4 {
+    font-family: 'Arapey', serif;
+    font-size: 2vw;
 }
 ul{
     list-style: none;
 }
-ul li{
-    margin: 3% 0;
+ul li {
+    font-family: 'Arapey', serif;
+    font-size: 1.5vw;
 }
-ul li a{
+ul li a {
     text-decoration: none;
-    font-family: 'Cinzel', serif;
-    font-size: 1.4vw;
-    color: #000000;
+    color: black;
 }
 ul li a:hover{
+    color: black;
     text-decoration: none;
-    color: red;
+    margin-left: 5%;
+    transition: .4s ease-in-out;
 }
-.course_name{
+.courses{
+    background-color: rgba(0,0,0,0.2);
+}
+.courses > h4 {
     font-family: 'Arapey', serif;
-    font-size: 1.6vw;
+    font-size: 2vw;
+}
+.row {
+    margin-bottom: 5%;
 }

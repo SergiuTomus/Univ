@@ -1,18 +1,8 @@
 @extends('main')
 
-    <!DOCTYPE html>
-<html>
-<head>
-
-<link rel="stylesheet" type="text/css" href="{{asset('css/courses/courses.css')}}">
-    <title>UK | Courses </title>
-</head>
-<body>
+@yield('stylesheets')
 
 @include('partials.courses_partials._courses')
 
 
-
-</body>
-</html>
 
