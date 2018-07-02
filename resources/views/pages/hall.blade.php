@@ -8,7 +8,7 @@
 <body>
 	<!-- Begin Hall Background Image -->
 	<div > 
-````````<img class="hall_img" src="{{$hall['path']}}" alt="{{$hall['path']}}">
+<img class="hall_img" src="/uploads/halls{{$hall['path']}}" alt="{{$hall['path']}}">
     	<div class="layer"></div>
     		<div class="hall_description">
 
