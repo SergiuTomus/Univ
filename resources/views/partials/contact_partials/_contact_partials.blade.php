@@ -1,3 +1,14 @@
+@section('background_pic')
+    <div>
+        <img src="{{asset('resources/index/homepage_bg.jpg')}}" class="home_bg">
+    </div>
+    <div>
+        <div class="uni_descr">
+            <h1 class="name text-center"> University of Kattegat </h1>
+            <p class="descr text-center"> Some description about our university  </p>
+        </div>
+    </div>
+    @endsection
 @section('content')
 <div class="contact-content">
 				<div class="container">

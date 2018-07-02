@@ -12,8 +12,8 @@
                         <div class="frontside">
                             <div class="card">
                                 <div class="card-body text-center">
-                                    <p><img class=" img-fluid" src="img/prof1.jpg" alt="card image"></p>
-                                    <h4 class="card-title">Popescu Ioana</h4>
+                                    <p><img class=" img-fluid" src="{{$teacher->path}}" alt="card image"></p>
+                                    <h4 class="card-title">{{$teacher->name}}</h4>
                                     <p class="card-text">Porf. Univ. Dr. - Computer Science</p>
                                     <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
                                 </div>
@@ -49,7 +49,7 @@
                                             </a>
                                         </li>
                                     </ul> 
-                                    <a href="#" class="btn btn-primary btn-sm"><i>Teacher Page</i></a>                        
+                                    <a href="{{route('teacher.show',$teacher->slug)}}" class="btn btn-primary btn-sm"><i>Teacher Page</i></a>                        
                                 </div>                           
                             </div>
                         </div>
