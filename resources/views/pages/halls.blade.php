@@ -1,20 +1,15 @@
 @extends('main')
-<!DOCTYPE html>
-<html>
-<head>
 
+@section('title','Halls')
 
-	
+@section('stylesheets')
    <link rel="stylesheet" type="text/css" href="{{asset('css/halls.css')}}">
-	
-
-	<title>UK | Halls</title>
-</head>
-<body>
-	
-@include('partials.halls_partials._halls')
+   <link rel="stylesheet" type="text/css" href="{{asset('css/navbar-black.css')}}">
+@endsection
 
 
 
-</body>
-</html>
+@section('content')
+    @include('partials.halls_partials._halls')
+@endsection
+

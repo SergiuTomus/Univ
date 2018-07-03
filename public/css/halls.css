@@ -1,13 +1,12 @@
 
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
-
-#team {
-    background: gray !important;
+h3{
+    font-family:'Cinzel',serif;
+    font-size: 4.5vw;
 }
-
-
-
-
+#team {
+    background: transparent !important;
+}
 
 section {
     padding: 60px 0;
@@ -16,16 +15,18 @@ section {
 section .section-title {
     text-align: center;
     color: black;
-    margin-bottom: 50px;
+    margin-top: 5%;
+    margin-bottom: 5%;
     text-transform: uppercase;
     font-family: 'Cinzel',serif;
     font-weight:  bold;
-    color: black;
+    font-size: 4.5vw;
+
 }
 
 #team .card {
-    border: none;
-    background: white;
+    border: rgba(0,0,0,1);
+    background: rgba(0,0,0,0.2);
 }
 
 .image-flip:hover .backside,
@@ -125,6 +126,7 @@ h4.card-title{
     font-family: 'Cinzel',serif;
     font-weight:  bold;
     color: black;
+    padding-top: 25%;
 
 
 }
@@ -134,15 +136,17 @@ p.card-text{
 }
 a.btn-primary,
 a.btn-primary:hover{
-    border: none;
-    background: red;
-}
-i{
-    color: black;
-    font-family: 'Arapey',serif;
-    font-weight:  bold;
+    border-color: none;
+    background: rgba(0,0,0,0.8);
 
 }
+
+b {
+    color: #FFFFFF;
+    font-family: 'Arapey',serif;
+    font-weight:  bold;
+}
+
 .container{
     margin-top: 5%;
 }

@@ -1,15 +1,5 @@
-@section('background_pic')
-    <div>
-        <img src="{{asset('resources/index/homepage_bg.jpg')}}" class="home_bg">
-    </div>
-    <div>
-        <div class="uni_descr">
-            <h1 class="name text-center"> University of Kattegat </h1>
-            <p class="descr text-center"> Some description about our university  </p>
-        </div>
-    </div>
-    @endsection
-@section('content')
+
+
 <div class="contact-content">
 				<div class="container">
 					<div class="row">
@@ -17,7 +7,7 @@
 						<h1>Contact</h1>
 						<hr>
 							<div class="contact-item">
-								
+
 								<ul>
 									<li>
 										<i class="fa fa-map-marker" aria-hidden="true"></i>
@@ -52,7 +42,7 @@
 										<div class="contact-info">
 											<h3>Fax</h3>
 											<div class="contact-desc">
-												<p> +40-0258-812630</p>										
+												<p> +40-0258-812630</p>
 											</div>
 										</div>
 									</li>
@@ -84,4 +74,3 @@
 					</div>
 				</div>
 			</div>
-			@endsection
