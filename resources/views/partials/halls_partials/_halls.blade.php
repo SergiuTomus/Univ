@@ -19,7 +19,7 @@
                         <div class="frontside">
                             <div class="card">
                                 <div class="card-body text-center">
-                                    <p><img class=" img-fluid" src="{{$hall->path}}" alt="card image"> </p>
+                                    <p><img class=" img-fluid" src="/uploads/halls{{$hall->path}}" alt="card image"> </p>
                                     <h4 class="card-title"> {{$hall->name}}<br> No.Seats: {{$hall->no_seats}} <br> Building: {{$hall->building}}</h4>
 
                                 </div>
