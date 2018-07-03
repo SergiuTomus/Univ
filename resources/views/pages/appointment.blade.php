@@ -6,21 +6,7 @@
     <link href="{{asset('css/bootstrap.min.css')}}" rel='stylesheet'>
     <link href="{{asset('css/appointment/fullcalendar.min.css')}}" rel='stylesheet'>
     <link href="{{asset('css/appointment/fullcalendar.print.min.css')}}" media='print'>
-    <style>
-
-      body {
-        margin: 40px 10px;
-        padding: 0;
-        font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
-        font-size: 14px;
-      }
-
-      #calendar {
-        max-width: 900px;
-        margin: 0 auto;
-      }
-
-    </style>
+    <link href="{{asset('css/appointment/appointment.css')}}" rel='stylesheet'>
   </head>
 
   <body>
@@ -34,17 +20,28 @@
         
           <!-- Modal Header -->
           <div class="modal-header">
-            <h4 class="modal-title">Modal Heading</h4>
+            <h4 class="modal-title">Course scheduling</h4>
             <button type="button" class="close" data-dismiss="modal">&times;</button>
           </div>
           
           <!-- Modal body -->
           <div class="modal-body">
-            Modal body..
+            <h6>Select the course:
+              <span>
+                <select>
+                  <option value="volvo">Inteligenta Artificiala</option>
+                  <option value="saab">Sofware Matematic</option>
+                  <option value="opel">Teoria Compilatoarelor</option>
+                  <option value="audi">Tehnici Avansate de Programare adfddsgdfhgdfgsdysfhfhtthdryydy</option>
+                </select>
+              </span>
+            </h6>
+            <h6>Select the hall:</h6>
+            <h6>Select the time:</h6>
           </div>
-          
           <!-- Modal footer -->
           <div class="modal-footer">
+            <button type="button" class="btn btn-primary">Save changes</button>
             <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
           </div>
           
@@ -52,27 +49,9 @@
       </div>
     </div>
 
-    <!-- Modal -->
-    {{-- <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-          </div>
-          <div class="modal-body">
-            ...
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-          </div>
-        </div>
-      </div>
-    </div> --}}
-
     <script>
         var allAppointmentsRoute = "{{ route('allAppointments') }}";
+        console.log(allAppointmentsRoute);
     </script>
 
     <script src="{{asset('js/jquery.js')}}"></script>
