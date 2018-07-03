@@ -1,5 +1,6 @@
 $(document).ready(function() {
 
+    $('#myModal').modal({ show: false})
 
     $('#calendar').fullCalendar({
         /*events: function(start, end, timezone, callback) {
@@ -24,7 +25,7 @@ $(document).ready(function() {
 
         dayClick: function(date, jsEvent, view) {
 
-          alert('Clicked on: ' + date.format());
+         // alert('Clicked on: ' + date.format());
           
           $('#myModal').modal('show');
          // alert('Coordinates: ' + jsEvent.pageX + ',' + jsEvent.pageY);
