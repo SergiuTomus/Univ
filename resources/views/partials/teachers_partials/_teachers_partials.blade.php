@@ -12,7 +12,7 @@
                         <div class="frontside">
                             <div class="card">
                                 <div class="card-body text-center">
-                                    <p><img class=" img-fluid" src="/uploads/teachers{{$teacher->path}}" alt="card image"></p>
+                                    <p><img class=" img-fluid" src="/uploads/teachers/{{$teacher->path}}" alt="card image"></p>
                                     <h4 class="card-title">{{$teacher->first_name . ' ' . $teacher->last_name}}</h4>
                                     <p class="card-text">Porf. Univ. Dr. - Computer Science</p>
                                     <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
