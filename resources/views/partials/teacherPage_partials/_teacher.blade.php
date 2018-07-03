@@ -1,5 +1,6 @@
+
 <div > 
-<img class="teacher_img" src="{{$teacher['path']}}" alt="{{$teacher['path']}}">
+<img class="teacher_img" src="/uploads/teachers{{$teacher->path}}" alt="{{$teacher->path}}">
     	<div class="layer"></div>
     		<div class="teacher_description">
 

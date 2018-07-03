@@ -13,6 +13,7 @@ class HallsController extends Controller
     {
     
         $halls=	Halls::leftjoin('media','halls.id', '=' , 'media.entity_id')
+        ->where('media.type','=','halls')
         ->select('halls.*','media.path')
         ->get();
     

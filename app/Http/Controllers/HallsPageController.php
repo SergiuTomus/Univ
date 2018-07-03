@@ -13,6 +13,7 @@ class HallsPageController extends Controller
 
 
     	$hall=	Halls::leftjoin('media','halls.id', '=' , 'media.entity_id')
+    	->where('media.type','=','halls')
         ->select('halls.*','media.path')
     	->where('slug', '=', $name)
     	->first()->toArray();
