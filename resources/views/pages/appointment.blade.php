@@ -6,6 +6,7 @@
     <link href="{{asset('css/bootstrap.min.css')}}" rel='stylesheet'>
     <link href="{{asset('css/appointment/fullcalendar.min.css')}}" rel='stylesheet'>
     <link href="{{asset('css/appointment/fullcalendar.print.min.css')}}" media='print'>
+    <link href="{{asset('css/appointment/wickedpicker.css')}}" rel='stylesheet'>
     <link href="{{asset('css/appointment/appointment.css')}}" rel='stylesheet'>
   </head>
 
@@ -26,18 +27,24 @@
           
           <!-- Modal body -->
           <div class="modal-body">
-            <h6>Select the course:
-              <span>
-                <select>
-                  <option value="volvo">Inteligenta Artificiala</option>
-                  <option value="saab">Sofware Matematic</option>
-                  <option value="opel">Teoria Compilatoarelor</option>
-                  <option value="audi">Tehnici Avansate de Programare adfddsgdfhgdfgsdysfhfhtthdryydy</option>
-                </select>
-              </span>
-            </h6>
+            <h6>Select the course:</h6>
+              <select>
+                <option value="tehnici">Tehnici Avansate de Programare</option>
+                <option value="ia">Inteligenta Artificiala</option>
+                <option value="software">Software Matematic</option>
+                <option value="teoria">Teoria Compilatoarelor</option>
+              </select>
+            <br><br>
             <h6>Select the hall:</h6>
+              <select>
+                <option value="tehnici">LIT 1</option>
+                <option value="ia">LMN</option>
+                <option value="software">A8</option>
+                <option value="teoria">LIT 2</option>
+              </select>
+            <br><br>
             <h6>Select the time:</h6>
+            <input class="timepicker" type="text" name="timepicker"/>
           </div>
           <!-- Modal footer -->
           <div class="modal-footer">
@@ -58,6 +65,7 @@
     <script src="{{asset('js/appointment/moment.min.js')}}"></script>
     <script src="{{asset('js/appointment/bootstrap.min.js')}}"></script>
     <script src="{{asset('js/appointment/fullcalendar.min.js')}}"></script>
+    <script src="{{asset('js/appointment/wickedpicker.js')}}"></script>
     <script src="{{asset('js/appointment/calendarfunction.js')}}"></script>
 
    

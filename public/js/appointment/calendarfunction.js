@@ -28,6 +28,7 @@ $(document).ready(function() {
          // alert('Clicked on: ' + date.format());
           
           $('#myModal').modal('show');
+          $('.timepicker').wickedpicker();
          // alert('Coordinates: ' + jsEvent.pageX + ',' + jsEvent.pageY);
       
           //alert('Current view: ' + view.name);
@@ -36,5 +37,8 @@ $(document).ready(function() {
           $(this).css('background-color', '#ccffff');
       
         }
-      });
+    });
+
+    
+
 });
