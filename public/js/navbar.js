@@ -3,9 +3,11 @@ $(document).scroll(function () {
     var x=$(this).scrollTop();
     if(x>5){
         $("#sticky").addClass('navbar-sticky');
+        $('#dropdown-sticky').addClass('dropdown-sticky');
 
     } else {
         $("#sticky").removeClass('navbar-sticky');
+        $('#dropdown-sticky').removeClass('dropdown-sticky');
     }
 });
 
