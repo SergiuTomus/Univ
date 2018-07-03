@@ -1,21 +1,4 @@
-.logo_{
-    font-family: 'Cinzel',serif;
-    font-size: 1.2vw;
-    color:black;
-}
 
-.navbar-default .navbar-nav > li > a {
-    color: black;
-    font-family: 'Cinzel',serif;
-    font-size: 1.5vw;
-}
-.navbar-default .navbar-nav > .active > a,
-.navbar-default .navbar-nav > .active > a:hover,
-.navbar-default .navbar-nav > .active > a:focus {
-    color: black;
-    background-color: rgba(0,0,0,0.2);
-
-}
 .contact-item {
 	width:55%;
 	height:100%;
@@ -27,7 +10,7 @@
 	font-size: 24px;
 	font-family: 'Cinzel',serif;
     font-weight:  bold;
-	
+
 }
 
 .contact-items {
@@ -59,10 +42,10 @@ ul {
 
 .fa {
 	display: inline-block;
-   
+
     font-size: 40px;
     -webkit-font-smoothing: antialiased;
-	
+
 }
 
 .fa:hover {
