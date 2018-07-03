@@ -27,6 +27,7 @@ Route::get('/teachers', 'TeachersController@teachers');
 
 Route::get('/hall/{name}', 'HallsPageController@hall')->name('hall.show');
 
+Route::get('/teacher/{name}', 'TeacherPageController@teacher')->name('teacher.show');
 
   Route::middleware(['auth'])->group(function () {
 
