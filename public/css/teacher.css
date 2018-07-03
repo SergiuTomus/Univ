@@ -1,0 +1,13 @@
+.teacher_img{
+	height: 400px;
+	width: 400px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+.teacher_description{
+	position: absolute;
+    top: 40%;
+    left: 35%;
+}
