@@ -45,3 +45,5 @@ Route::get('/teacher/{name}', 'TeacherPageController@teacher')->name('teacher.sh
       return view('pages.index');
   });
 
+  Route::get('/faculties', 'FacultiesController@faculties');
+
