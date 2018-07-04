@@ -5,7 +5,7 @@
 
 
 
-        <h1 class="section-title h1">Faculty Name</h1>
+        <h1 class="section-title h1">{{$faculty['name']}}</h1>
         <div class="row">
     <div class="col-sm-3 sidenav">
     
@@ -15,8 +15,8 @@
     </div>
 
     <div class="facult col-sm-9">
-     <img class="imag" src="/uploads/halls/A9.jpg">
-     <h3>ceva chestii</h3>
+     <img class="imag" src="/uploads/faculties/{{$faculty['path']}}">
+     <h3>{{$faculty['description']}}</h3>
      <hr>
     
 
