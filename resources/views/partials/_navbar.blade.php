@@ -22,7 +22,7 @@
             <ul class="nav navbar-nav">
                 <li class="active"><a href="/"> Home <span class="sr-only">(current)</span></a></li>
                 <li class="dropdown">
-                    <a href="/faculties" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Faculties + </a>
+                    <a href="/faculties/all" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Faculties + </a>
                     <ul class="dropdown-menu" id="dropdown-sticky">
                         <li><a href="/faculties/economics">Economics</a></li>
                         <li><a href="/faculties/science">Science</a></li>

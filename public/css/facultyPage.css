@@ -1,0 +1,24 @@
+section {
+    padding: 60px 0;
+}
+
+section .section-title {
+    text-align: center;
+    color: black;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    text-transform: uppercase;
+    font-family: 'Cinzel',serif;
+    font-weight:  bold;
+    font-size: 4.5vw;
+
+}
+
+section.facult,.sidenav{
+
+	background: #B8B8B8;
+}
+
+img.imag{
+	width:   130%;
+}
