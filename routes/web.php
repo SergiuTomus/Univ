@@ -47,3 +47,5 @@ Route::get('faculty','FacultyPageController@faculty');
       return view('pages.index');
   });
 
+  Route::get('/faculties', 'FacultiesController@faculties');
+
