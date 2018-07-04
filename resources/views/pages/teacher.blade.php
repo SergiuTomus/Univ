@@ -1,20 +1,12 @@
 @extends('main')
-<!DOCTYPE html>
-<html>
-<head>	
-	<link rel="stylesheet" type="text/css" href="{{asset('css/teacher.css')}}">
-	<title>UK | Teacher page</title>
-</head>
-<body>
-	<!-- Begin Hall Background Image -->
-	<div > 
-<img class="teacher_img" src="/uploads/teachers{{$teacher->path}}" alt="{{$teacher->path}}">
-    	<div class="layer"></div>
-    		<div class="teacher_description">
+@section('title','teachers')
 
-     			<h1 class="name text-center"> {$teacher->first_name . ' ' . $teacher->last_name}}</h1>
-     			<p class="descr text-center">Courses: {{$teacher->name}}</p>
-			</div>
-	</div> <!-- End Hall Background Image -->
-</body>
-</html>
+@section('stylesheets')
+    <link rel="stylesheet" type="text/css" href="css/teacher.css">
+	<link rel="stylesheet" type="text/css" href="{{asset('css/navbar-black.css')}}">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+	@endsection
+
+@yield('background_pic')
+
+@include('partials.teacherPage_partials._teacher_partials')
