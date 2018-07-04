@@ -1,9 +1,30 @@
 $(document).ready(function() {
 
-    $('#myModal').modal({ show: false})
+
+    $('#btn-saveData').click(function() { 
+      submitAppointment();
+    });
+
+    function submitAppointment() {
+      $('#myModal').modal('toggle');
+
+      //send data to server via AJAX
+      $.ajax({
+        type: "POST",
+        url: sendAppointmentsRoute,
+        dataType: 'json',
+        success: function(data){
+          alert(data);
+        }
+      });
+
+      
+    };
+
+   
 
     $('#calendar').fullCalendar({
-        /*events: function(start, end, timezone, callback) {
+        events: function(start, end, timezone, callback) {
           $.ajax({
             url: allAppointmentsRoute,
             dataType: 'json',
@@ -21,20 +42,18 @@ $(document).ready(function() {
               callback(events);
             }
           });
-        } */
+        }, 
 
         dayClick: function(date, jsEvent, view) {
 
          // alert('Clicked on: ' + date.format());
+          var dateTime = moment(date).format("YYYY-MM-DD");
+          $('#selectedDate').val(dateTime);
           
           $('#myModal').modal('show');
           $('.timepicker').wickedpicker();
-         // alert('Coordinates: ' + jsEvent.pageX + ',' + jsEvent.pageY);
-      
-          //alert('Current view: ' + view.name);
-      
-          // change the day's background color just for fun
-          $(this).css('background-color', '#ccffff');
+
+          //$(this).css('background-color', '#ccffff');
       
         }
     });

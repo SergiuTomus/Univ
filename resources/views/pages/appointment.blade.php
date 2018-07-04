@@ -27,28 +27,28 @@
           
           <!-- Modal body -->
           <div class="modal-body">
+            <input type="hidden" id="selectedDate"/>
             <h6>Select the course:</h6>
               <select>
-                <option value="tehnici">Tehnici Avansate de Programare</option>
-                <option value="ia">Inteligenta Artificiala</option>
-                <option value="software">Software Matematic</option>
-                <option value="teoria">Teoria Compilatoarelor</option>
+                @foreach($courses as $course)
+                  <option value="{{$course->id}}">{{$course->name}}</option>
+                @endforeach
               </select>
             <br><br>
             <h6>Select the hall:</h6>
               <select>
-                <option value="tehnici">LIT 1</option>
-                <option value="ia">LMN</option>
-                <option value="software">A8</option>
-                <option value="teoria">LIT 2</option>
+                @foreach($halls as $hall)
+                  <option value="{{$hall->id}}">{{$hall->name}}</option>
+                @endforeach
               </select>
             <br><br>
             <h6>Select the time:</h6>
             <input class="timepicker" type="text" name="timepicker"/>
           </div>
+
           <!-- Modal footer -->
           <div class="modal-footer">
-            <button type="button" class="btn btn-primary">Save changes</button>
+            <button id="btn-saveData" type="button" class="btn btn-primary">Save changes</button>
             <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
           </div>
           
@@ -59,6 +59,8 @@
     <script>
         var allAppointmentsRoute = "{{ route('allAppointments') }}";
         console.log(allAppointmentsRoute);
+        var sendAppointmentsRoute = "{{ route('sendAppointments') }}";
+        console.log(sendAppointmentsRoute);
     </script>
 
     <script src="{{asset('js/jquery.js')}}"></script>

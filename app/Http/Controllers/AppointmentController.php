@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Appointments; 
+use App\Courses;
+use App\Halls;
 
 class AppointmentController extends Controller
 {
@@ -13,12 +15,30 @@ class AppointmentController extends Controller
     }
 
     public function appointment(){
-        return view('pages.appointment');
+
+        $courses = Courses::select('name', 'id')
+        ->get();
+
+        $halls = Halls::select('name', 'id')
+        ->get();
+        //var_dump($courses);die;
+
+        return view('pages.appointment',
+                    array(
+                        'courses' => $courses,
+                        'halls' => $halls
+                    )
+        );
     }
 
     public function getAppointments() 
     {
         $appointments = Appointments::all();
         return response()->json(array('appointments'=> $appointments), 200);
+    }
+
+    public function postAppointments()
+    {
+        
     }
 }

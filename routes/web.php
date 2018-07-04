@@ -40,7 +40,13 @@ Route::get('/teacher/{name}', 'TeacherPageController@teacher')->name('teacher.sh
       'uses' => 'AppointmentController@getAppointments'
     ]);
 
+    Route::post('/postAppointments', [
+      'as' => 'sendAppointments',
+      'uses' => 'AppointmentController@postAppointments'
+    ]);
+
 });
+
   Route::get('/',function (){
       return view('pages.index');
   });
