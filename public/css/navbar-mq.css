@@ -1,0 +1,15 @@
+@media (min-width: 1px) and (max-width: 320px){
+    .uni_descr{
+        width: 50%;
+        position: absolute;
+        top:15%;
+        left: 25%;
+        z-index: 1000;
+    }
+
+
+
+
+
+
+}
