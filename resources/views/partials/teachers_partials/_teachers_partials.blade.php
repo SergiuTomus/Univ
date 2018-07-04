@@ -1,6 +1,6 @@
 <section id="team" class="pb-5">
     <div class="container">
-        <h5 class="section-title h1">Our Teachers</h5>
+        <h5 class="section-title h1">Teachers</h5>
         <div class="row">
             <!-- Team member -->
 

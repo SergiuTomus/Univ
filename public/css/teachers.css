@@ -16,18 +16,22 @@
 .navbar-default .navbar-nav > .active > a:focus {
     color: black;
     background-color: rgba(0,0,0,0.2);
-
 }
+
+.i fa {
+   color: red;
+}
+
 
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 #team {
-    background: #eee !important;
+    background: transparent;
 }
 
 .btn-primary:hover,
 .btn-primary:focus {
     background-color:red;
-    border-color:red;
+    border-color:black;
     box-shadow: none;
     outline: none;
 }
@@ -40,6 +44,7 @@
 
 section {
     padding: 60px 0;
+    padding-top: 100px;
 }
 
 section .section-title {
@@ -137,6 +142,7 @@ section .section-title {
     font-size: 18px;
     color: white;
     
+    
 }
 
 .frontside .card .card-title,
@@ -148,8 +154,8 @@ section .section-title {
 }
 
 .frontside .card .card-body img {
-    width: 120px;
-    height: 120px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
 }
 

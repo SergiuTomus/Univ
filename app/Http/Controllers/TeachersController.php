@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;       
 use Illuminate\Routing\Controller as BaseController;
 use App\User;
+use App\Courses;
+use App\Media;
 
 class TeachersController extends Controller {
     public function teachers(){
@@ -15,7 +17,7 @@ class TeachersController extends Controller {
         ->where('role', '=', 2)
         ->get();
             
-        
+       
 
         return view('pages.teachers', [
             'teachers' => $teachers
