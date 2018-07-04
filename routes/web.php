@@ -39,6 +39,8 @@ Route::get('/teacher/{name}', 'TeacherPageController@teacher')->name('teacher.sh
       'as' => 'allAppointments',
       'uses' => 'AppointmentController@getAppointments'
     ]);
+      Route::get('profile/{slug}', 'UserController@index')->name('users.show');
+      Route::get('/profile/{slug}/update','UserController@update')->name('users.update');
 
 });
   Route::get('/',function (){
