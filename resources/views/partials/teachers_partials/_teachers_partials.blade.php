@@ -49,7 +49,7 @@
                                             </a>
                                         </li>
                                     </ul> 
-                                    <a href="{{route('teacher.show',$teacher->slug)}}" class="btn btn-primary btn-sm"><i>Teacher Page</i></a>                        
+                                    <a href="{{route('teacher.show',$teacher->slug)}}" class="btn btn-secondary btn-sm"><i>Teacher Page</i></a>                        
                                 </div>                           
                             </div>
                         </div>

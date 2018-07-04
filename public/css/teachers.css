@@ -18,9 +18,7 @@
     background-color: rgba(0,0,0,0.2);
 }
 
-.i fa {
-   color: red;
-}
+
 
 
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
@@ -42,18 +40,24 @@
     border-color: red;
 }
 
+.btn-secondary {
+    color: red;
+   border-color:black;
+}
+
 section {
-    padding: 60px 0;
+   
     padding-top: 100px;
 }
 
 section .section-title {
     text-align: center;
-    color:red;
+    font-size: 66px;
+    color:black;
     margin-bottom: 50px;
     font-family: 'Cinzel',serif;
     font-weight:  bold;
-    color: black;
+    
 }
 
 #team .card {
@@ -140,17 +144,17 @@ section .section-title {
 
 .backside .card a {
     font-size: 18px;
-    color: white;
+    color: red;
     
     
 }
 
 .frontside .card .card-title,
 .backside .card .card-title {
-    color: red;
+    color: black;
     font-family: 'Cinzel',serif;
     font-weight:  bold;
-    color: black;
+    
 }
 
 .frontside .card .card-body img {
