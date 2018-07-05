@@ -29,6 +29,8 @@ Route::get('/hall/{name}', 'HallsPageController@hall')->name('hall.show');
 
 Route::get('/teacher/{name}', 'TeacherPageController@teacher')->name('teacher.show');
 
+Route::get('/faculties', 'FacultiesController@faculties');
+
 Route::get('/faculty/{name}','FacultyPageController@faculty')->name('faculty.show');
 
   Route::middleware(['auth'])->group(function () {
@@ -44,7 +46,7 @@ Route::get('/faculty/{name}','FacultyPageController@faculty')->name('faculty.sho
       Route::get('profile/{slug}', 'UserController@index')->name('users.show');
       Route::get('/profile/{slug}/update','UserController@update')->name('users.update');
 
-    Route::post('/postAppointments', [
+    Route::post('postAppointments', [
       'as' => 'sendAppointments',
       'uses' => 'AppointmentController@postAppointments'
     ]);
@@ -54,6 +56,4 @@ Route::get('/faculty/{name}','FacultyPageController@faculty')->name('faculty.sho
   Route::get('/',function (){
       return view('pages.index');
   });
-
-  Route::get('/faculties', 'FacultiesController@faculties');
-
+  
