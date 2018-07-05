@@ -1,5 +1,5 @@
 @extends('main')
-@section('title','teachers')
+@section('title','Teacher Page')
 
 @section('stylesheets')
     <link rel="stylesheet" type="text/css" href="css/teacher.css">
