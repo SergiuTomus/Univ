@@ -22,13 +22,13 @@
             <ul class="nav navbar-nav">
                 <li class="active"><a href="/"> Home <span class="sr-only">(current)</span></a></li>
                 <li class="dropdown">
-                    <a href="/faculties/all" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Faculties + </a>
+                    <a href="/faculties" onclick="location.href='/faculties'" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Faculties + </a>
                     <ul class="dropdown-menu" id="dropdown-sticky">
-                        <li><a href="/faculties/economics">Economics</a></li>
-                        <li><a href="/faculties/science">Science</a></li>
-                        <li><a href="/faculties/arts">Arts</a></li>
-                        <li><a href="faculties/design">Design</a></li>
-                        <li><a href="/faculties/literature">Literature</a></li>
+                        <li><a href="/faculty/economics">Economics</a></li>
+                        <li><a href="/faculty/science">Science</a></li>
+                        <li><a href="/faculty/arts">Arts</a></li>
+                        <li><a href="/faculty/design">Design</a></li>
+                        <li><a href="/faculty/literature">Literature</a></li>
                     </ul>
                 </li>
                 <li><a href="/courses/all"> Courses </a></li>

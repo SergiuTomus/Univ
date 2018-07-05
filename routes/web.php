@@ -29,6 +29,8 @@ Route::get('/hall/{name}', 'HallsPageController@hall')->name('hall.show');
 
 Route::get('/teacher/{name}', 'TeacherPageController@teacher')->name('teacher.show');
 
+Route::get('/faculties', 'FacultiesController@faculties');
+
 Route::get('/faculty/{name}','FacultyPageController@faculty')->name('faculty.show');
 
   Route::middleware(['auth'])->group(function () {
@@ -54,6 +56,4 @@ Route::get('/faculty/{name}','FacultyPageController@faculty')->name('faculty.sho
   Route::get('/',function (){
       return view('pages.index');
   });
-
-  Route::get('/faculties', 'FacultiesController@faculties');
-
+  
