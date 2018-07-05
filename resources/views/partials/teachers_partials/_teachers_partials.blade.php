@@ -1,6 +1,6 @@
 <section id="team" class="pb-5">
     <div class="container">
-        <h5 class="section-title h1">Our Teachers</h5>
+        <h5 class="section-title h1">Teachers</h5>
         <div class="row">
             <!-- Team member -->
 
@@ -49,7 +49,7 @@
                                             </a>
                                         </li>
                                     </ul> 
-                                    <a href="{{route('teacher.show',$teacher->slug)}}" class="btn btn-primary btn-sm"><i>Teacher Page</i></a>                        
+                                    <a href="{{route('teacher.show',$teacher->slug)}}" class="btn btn-secondary btn-sm"><i>Teacher Page</i></a>                        
                                 </div>                           
                             </div>
                         </div>

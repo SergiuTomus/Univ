@@ -44,7 +44,13 @@ Route::get('/faculty/{name}','FacultyPageController@faculty')->name('faculty.sho
       Route::get('profile/{slug}', 'UserController@index')->name('users.show');
       Route::get('/profile/{slug}/update','UserController@update')->name('users.update');
 
+    Route::post('/postAppointments', [
+      'as' => 'sendAppointments',
+      'uses' => 'AppointmentController@postAppointments'
+    ]);
+
 });
+
   Route::get('/',function (){
       return view('pages.index');
   });
