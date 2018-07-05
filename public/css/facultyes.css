@@ -11,10 +11,14 @@
 
 .card {
   height: 100%;
+
 }
 
-.card img{
+img.imag{
+	height:  250px;
 	width: 250px;
+		padding: 60px 0; 
+
 }
 .row
 {
