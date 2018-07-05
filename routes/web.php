@@ -20,6 +20,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('/faculty/{name}','FacultyPageController@faculty')->name('faculty.show');
 
 Route::get('/contact', 'ContactController@contact');
 
@@ -29,7 +30,7 @@ Route::get('/hall/{name}', 'HallsPageController@hall')->name('hall.show');
 
 Route::get('/teacher/{name}', 'TeacherPageController@teacher')->name('teacher.show');
 
-Route::get('/faculty/{name}','FacultyPageController@faculty')->name('faculty.show');
+
 
   Route::middleware(['auth'])->group(function () {
 
@@ -42,7 +43,14 @@ Route::get('/faculty/{name}','FacultyPageController@faculty')->name('faculty.sho
       'uses' => 'AppointmentController@getAppointments'
     ]);
       Route::get('profile/{slug}', 'UserController@index')->name('users.show');
-      Route::get('/profile/{slug}/update','UserController@update')->name('users.update');
+      Route::get('/profile/update/{slug}', [
+          'as' => 'users.edit',
+          'uses' => 'UserController@edit'
+      ]);
+      Route::put('/profile/update/{slug}', [
+          'as' => 'users.update',
+          'uses' => 'UserController@update'
+      ]);
 
 });
   Route::get('/',function (){

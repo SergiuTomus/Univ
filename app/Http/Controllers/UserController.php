@@ -21,40 +21,21 @@ class UserController extends Controller
 
         return view('partials/users/profile',array('user'=>$user));
     }
-    public function update(Request $request) {
+    public function edit($id)
+    {
+        $user = User::find($id);
 
-        /**
-         * fetching the user model
-         */
-        $user = Auth::user();
-
-
-        /**
-         * Validate request/input
-         **/
-        $this->validate($request, [
-            'first_name' => 'required|max:255'.$user->id,
-            'last_name' => 'required|max:255'.$user->id,
-            'email' => 'required|email|max:255|unique:users,email,'.$user->id,
-        ]);
-
-        /**
-         * storing the input fields name & email in variable $input
-         * type array
-         **/
-        $input = $request->only('first_name','last_name','email');
+        return view('partials/users/edit', compact('user'));
+    }
+    public function update(Request $request, $id)
+    {
+        $user = User::find($id);
+        $user->first_name=$request->input('first_name');
+        $user->last_name =$request->input('last_name');
+        $user->email=$request->input('email');
 
 
-
-        /**
-         * Accessing the update method and passing in $input array of data
-         **/
-        $user->update($input);
-
-        /**
-         * after everything is done return them pack to /profile/ uri
-         **/
+        $user->save();
         return back();
     }
-
 }
