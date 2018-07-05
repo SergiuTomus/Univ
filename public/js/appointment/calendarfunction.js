@@ -1,27 +1,6 @@
 $(document).ready(function() {
 
 
-    $('#btn-saveData').click(function() { 
-      submitAppointment();
-    });
-
-    function submitAppointment() {
-      $('#myModal').modal('toggle');
-
-      //send data to server via AJAX
-      $.ajax({
-        type: "POST",
-        url: sendAppointmentsRoute,
-        dataType: 'json',
-        success: function(data){
-          alert(data);
-        }
-      });
-
-      
-    };
-
-   
 
     $('#calendar').fullCalendar({
         events: function(start, end, timezone, callback) {
@@ -59,5 +38,27 @@ $(document).ready(function() {
     });
 
     
+    $('#btn-sendData').click(function() { 
+      submitAppointment();
+    });
+
+    function submitAppointment() {
+      $('#myModal').modal('toggle');
+      var selectedDate = $('#selectedDate').val();
+      alert(selectedDate);
+      //send data to server via AJAX
+      $.ajax({
+        type: "POST",
+        data: "selectedDate=" + selectedDate,
+        url: sendAppointmentsRoute,
+        dataType: 'json',
+        success: function(data){
+          console.log(data);
+        }
+      });
+
+      
+    };
+
 
 });

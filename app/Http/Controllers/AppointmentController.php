@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Appointments; 
 use App\Courses;
 use App\Halls;
+use DB;
 
 class AppointmentController extends Controller
 {
@@ -37,8 +38,14 @@ class AppointmentController extends Controller
         return response()->json(array('appointments'=> $appointments), 200);
     }
 
-    public function postAppointments()
+    public function postAppointments(Request $request)
     {
-        
+       // return $request;
+
+        $selectedDate = $request->selectedDate;
+
+        $addDate = DB::table('appointments')->insert([
+            'app_date' => $selectedDate
+        ]);
     }
 }

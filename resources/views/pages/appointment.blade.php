@@ -48,7 +48,7 @@
 
           <!-- Modal footer -->
           <div class="modal-footer">
-            <button id="btn-saveData" type="button" class="btn btn-primary">Save changes</button>
+            <button id="btn-sendData" type="button" class="btn btn-primary">Save changes</button>
             <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
           </div>
           
