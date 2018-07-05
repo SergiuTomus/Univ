@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset='utf-8' />
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     
     <link href="{{asset('css/bootstrap.min.css')}}" rel='stylesheet'>
     <link href="{{asset('css/appointment/fullcalendar.min.css')}}" rel='stylesheet'>
@@ -27,16 +28,17 @@
           
           <!-- Modal body -->
           <div class="modal-body">
+         <!--  {!! csrf_field() !!} -->
             <input type="hidden" id="selectedDate"/>
             <h6>Select the course:</h6>
-              <select>
+              <select name="course_selector">
                 @foreach($courses as $course)
                   <option value="{{$course->id}}">{{$course->name}}</option>
                 @endforeach
               </select>
             <br><br>
             <h6>Select the hall:</h6>
-              <select>
+              <select name="hall_selector">
                 @foreach($halls as $hall)
                   <option value="{{$hall->id}}">{{$hall->name}}</option>
                 @endforeach
@@ -58,9 +60,7 @@
 
     <script>
         var allAppointmentsRoute = "{{ route('allAppointments') }}";
-        console.log(allAppointmentsRoute);
         var sendAppointmentsRoute = "{{ route('sendAppointments') }}";
-        console.log(sendAppointmentsRoute);
     </script>
 
     <script src="{{asset('js/jquery.js')}}"></script>
