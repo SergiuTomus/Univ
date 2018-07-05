@@ -13,7 +13,7 @@ $(document).ready(function() {
             var length =  data['appointments'].length;
             for(i=0; i<length; i++) {
                 events.push({
-                    title: 'Lorem Ipsum',
+                    title: 'Lore Ipsum',
                     start: data['appointments'][i]['app_date']
                   });
              }
@@ -47,6 +47,7 @@ $(document).ready(function() {
       var selectedDate = $('#selectedDate').val();
       var cours_id = $('select[name=course_selector]').val();
       var hall_id = $('select[name=hall_selector]').val();
+      var timepicker = $('#timepicker').val();
 
       //send data to server via AJAX
       $.ajax({
@@ -57,7 +58,8 @@ $(document).ready(function() {
         data: {
           selectedDate: selectedDate,
           cours_id: cours_id,
-          hall_id: hall_id
+          hall_id: hall_id,
+          timepicker: timepicker
         },
         url: sendAppointmentsRoute,
         dataType: 'json',
