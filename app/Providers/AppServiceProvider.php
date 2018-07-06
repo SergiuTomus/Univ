@@ -13,7 +13,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+      //  $gate->define('create-app', function ($user, $appointment) {
+         //   return $user->id === $appointment->user_id;
     }
 
     /**

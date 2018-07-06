@@ -1,44 +1,73 @@
 $(document).ready(function() {
 
-    $('#myModal').modal({ show: false})
+
 
     $('#calendar').fullCalendar({
-        /*events: function(start, end, timezone, callback) {
+        events: function(start, end, timezone, callback) {
           $.ajax({
             url: allAppointmentsRoute,
             dataType: 'json',
-            success: function(data) {
-            
+            success: function(response) {
+
             var events = [];
-            var length =  data['appointments'].length;
+            var length =  response['appointments'].length;
             for(i=0; i<length; i++) {
                 events.push({
-                    title: 'Lorem Ipsum',
-                    start: data['appointments'][i]['app_date']
+                    title: response['appointments'][i]['first_name'],
+                    start: response['appointments'][i]['app_date'],
                   });
              }
 
               callback(events);
             }
           });
-        } */
+        },
 
         dayClick: function(date, jsEvent, view) {
 
          // alert('Clicked on: ' + date.format());
-          
+          var dateTime = moment(date).format("YYYY-MM-DD");
+          $('#selectedDate').val(dateTime);
+
           $('#myModal').modal('show');
           $('.timepicker').wickedpicker();
-         // alert('Coordinates: ' + jsEvent.pageX + ',' + jsEvent.pageY);
-      
-          //alert('Current view: ' + view.name);
-      
-          // change the day's background color just for fun
-          $(this).css('background-color', '#ccffff');
-      
+
+          //$(this).css('background-color', '#ccffff');
+
         }
     });
 
-    
+
+    $('#btn-sendData').click(function() {
+      submitAppointment();
+    });
+
+    function submitAppointment() {
+      $('#myModal').modal('toggle');
+      var selectedDate = $('#selectedDate').val();
+      var cours_id = $('select[name=course_selector]').val();
+      var hall_id = $('select[name=hall_selector]').val();
+
+      //send data to server via AJAX
+      $.ajax({
+        headers: {
+          'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        },
+        type: "POST",
+        data: {
+          selectedDate: selectedDate,
+          cours_id: cours_id,
+          hall_id: hall_id
+        },
+        url: sendAppointmentsRoute,
+        dataType: 'json',
+        success: function(data){
+          console.log(data);
+        }
+      });
+
+
+    };
+
 
 });

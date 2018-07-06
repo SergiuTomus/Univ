@@ -1,10 +1,8 @@
 <section>
-<div class="container">
+<div class="container my-4">
 
       <!-- Jumbotron Header -->
-      <div class="jumbotron my-4">
-        <img class="imag" src="/uploads/banner/banner.jpg">
-      </div>
+     
 
       <!-- Page Features -->
       <div class="row text-center">
@@ -13,7 +11,7 @@
 
         <div class="col-lg-3 col-md-6 mb-4">
           <div class="card">
-            <img class="card-img-top" src="/uploads/faculties/{{$faculty->path}}" alt="{{$faculty->path}}">
+            <img class="imag card-img-top" src="/uploads/faculties/{{$faculty->path}}" alt="{{$faculty->path}}">
             <div class="card-body">
               <h4 class="card-title">{{$faculty->name}}</h4>
               <p class="card-text">{{$faculty->description}}</p>

@@ -30,6 +30,9 @@ Route::get('/hall/{name}', 'HallsPageController@hall')->name('hall.show');
 
 Route::get('/teacher/{name}', 'TeacherPageController@teacher')->name('teacher.show');
 
+Route::get('/faculties', 'FacultiesController@faculties');
+
+Route::get('/faculty/{name}','FacultyPageController@faculty')->name('faculty.show');
 
 
   Route::middleware(['auth'])->group(function () {
@@ -52,10 +55,13 @@ Route::get('/teacher/{name}', 'TeacherPageController@teacher')->name('teacher.sh
           'uses' => 'UserController@update'
       ]);
 
+    Route::post('postAppointments', [
+      'as' => 'sendAppointments',
+      'uses' => 'AppointmentController@postAppointments'
+    ]);
+
 });
+
   Route::get('/',function (){
       return view('pages.index');
   });
-
-  Route::get('/faculties', 'FacultiesController@faculties');
-
