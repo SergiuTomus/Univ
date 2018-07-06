@@ -1,6 +1,6 @@
 @extends('main')
 
-@section('title','teachers')
+@section('title','Teachers')
 
 @section('stylesheets')
     <link rel="stylesheet" type="text/css" href="{{asset('css/teachers.css')}}">
