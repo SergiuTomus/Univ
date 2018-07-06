@@ -71,5 +71,21 @@ $(document).ready(function() {
       
     };
 
+  /*Cancel Button*/
+  $('#btn-cancelData').click(function() 
+  { 
+    deleteAppointment();
+  });
+
+  function deleteAppointment() 
+  {
+            
+  };
+
+  function dropCalendarDate()
+  {
+          
+  }
+
 
 });
