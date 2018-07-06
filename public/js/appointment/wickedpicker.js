@@ -34,22 +34,14 @@
 
     var pluginName = "wickedpicker",
         defaults = {
-<<<<<<< HEAD
             now: today.getHours() + ':' + '00',
-=======
-            now: today.getHours() + ':' + today.getMinutes(),
->>>>>>> 2e82c8ba485c95953ff6fa600e01caadd9c3efb8
             twentyFour: true,
             upArrow: 'wickedpicker__controls__control-up',
             downArrow: 'wickedpicker__controls__control-down',
             close: 'wickedpicker__close',
             hoverState: 'hover-state',
             title: 'Timepicker',
-<<<<<<< HEAD
             showSeconds: false,
-=======
-            showSeconds: true,
->>>>>>> 2e82c8ba485c95953ff6fa600e01caadd9c3efb8
             timeSeparator: ':',
             secondsInterval: 1,
             minutesInterval: 60,
