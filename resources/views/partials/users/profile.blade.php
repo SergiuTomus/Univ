@@ -21,7 +21,7 @@
                 <h5><b> Last name : </b><p> {{$user['last_name']}}</p></h5>
                 <h5><b> E-mail : </b><p> {{$user['email']}}</p></h5>
                 <br>
-                <button class="btn-lg btn-primary update"><a href="{{route('users.update',$user['slug'])}}" class="update-link"> Update my profile details </a></button>
+                <button class="btn-lg btn-primary update"><a href="{{route('users.edit',$user['slug'])}}" class="update-link"> Update my profile details </a></button>
             </div>
         </div>
     </div>

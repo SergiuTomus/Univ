@@ -7,45 +7,45 @@ $(document).ready(function() {
           $.ajax({
             url: allAppointmentsRoute,
             dataType: 'json',
-            success: function(data) {
+            success: function(response) {
 
             var events = [];
-            var length =  data['appointments'].length;
+            var length =  response['appointments'].length;
             for(i=0; i<length; i++) {
                 events.push({
-                    title: 'Lore Ipsum',
-                    start: data['appointments'][i]['app_date']
+                    title: response['appointments'][i]['first_name'],
+                    start: response['appointments'][i]['app_date'],
                   });
              }
 
               callback(events);
             }
           });
-        }, 
+        },
 
         dayClick: function(date, jsEvent, view) {
 
          // alert('Clicked on: ' + date.format());
           var dateTime = moment(date).format("YYYY-MM-DD");
           $('#selectedDate').val(dateTime);
-          
+
           $('#myModal').modal('show');
           $('.timepicker').wickedpicker();
 
           //$(this).css('background-color', '#ccffff');
-      
+
         }
     });
 
-    
-    $('#btn-sendData').click(function() { 
+
+    $('#btn-sendData').click(function() {
       submitAppointment();
     });
 
     function submitAppointment() {
       $('#myModal').modal('toggle');
       var selectedDate = $('#selectedDate').val();
-      var cours_id = $('select[name=course_selector]').val();
+      var course_id = $('select[name=course_selector]').val();
       var hall_id = $('select[name=hall_selector]').val();
       var timepicker = $('#timepicker').val();
 
@@ -57,7 +57,7 @@ $(document).ready(function() {
         type: "POST",
         data: {
           selectedDate: selectedDate,
-          cours_id: cours_id,
+          course_id: course_id,
           hall_id: hall_id,
           timepicker: timepicker
         },
@@ -68,7 +68,7 @@ $(document).ready(function() {
         }
       });
 
-      
+
     };
 
 

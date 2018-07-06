@@ -34,17 +34,17 @@
 
     var pluginName = "wickedpicker",
         defaults = {
-            now: today.getHours() + ':' + today.getMinutes(),
+            now: today.getHours() + ':' + '00',
             twentyFour: true,
             upArrow: 'wickedpicker__controls__control-up',
             downArrow: 'wickedpicker__controls__control-down',
             close: 'wickedpicker__close',
             hoverState: 'hover-state',
             title: 'Timepicker',
-            showSeconds: true,
+            showSeconds: false,
             timeSeparator: ':',
             secondsInterval: 1,
-            minutesInterval: 1,
+            minutesInterval: 60,
             beforeShow: null,
             afterShow: null,
             show: null,
@@ -107,7 +107,7 @@
             this.showHideMeridiemControl();
             if (this.getText(element) !== this.getTime()) {
 
-                // Check meridiem 
+                // Check meridiem
                 var text = this.getText(element);
                 var re = /\s[ap]m$/i;
                 var meridiem = re.test(text) ? text.substr(-2, 2) : null;
@@ -140,8 +140,8 @@
          * Hides the timepicker that is currently shown if it is not part of the timepicker
          *
          * @param {Object} The DOM object being clicked on the page
-         * 
-         * BeinnLora: added trigger function to call on closing/hiding timepicker. 
+         *
+         * BeinnLora: added trigger function to call on closing/hiding timepicker.
          */
         hideTimepicker: function (element) {
             this.timepicker.hide();

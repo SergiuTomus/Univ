@@ -778,11 +778,11 @@
                     <!--CATEGORY CONTENT ONE BIG-->
                     <div class="col-md-4 col-sm-12 col-xs-12 grid big inLeft">
                         <figure class="port-effect-scale">
-                            <img src="images/portfolios/big-1.jpg" class="img-responsive" alt="portfolio-demo"/>
+                            <img src="{{asset('uploads/teacher/port1.jpg')}}" class="img-responsive" alt="portfolio-demo"/>
                             <figcaption>
                                 <h2>Lightbox <span> IMAGE</span></h2>
                                 <p>Two Hover Effect For Portfolio Grid Blocks. Its Scale</p>
-                                <a href="images/portfolios/big-1.jpg" class="popup-image" data-effect="mfp-3d-unfold">View
+                                <a href="{{asset('uploads/teacher/port1.jpg')}}" class="popup-image" data-effect="mfp-3d-unfold">View
                                     more</a>
                             </figcaption>
                         </figure>
@@ -791,12 +791,12 @@
                     <!--CATEGORY CONTENT TWO SMALL-->
                     <div class="col-md-4 col-sm-6 col-xs-12 grid inRight">
                         <figure class="port-effect-scale">
-                            <img src="images/portfolios/portfolio-1.jpg" class="img-responsive" alt="portfolio-demo"/>
+                            <img src="{{asset('uploads/teacher/port2.jpg')}}" class="img-responsive" alt="portfolio-demo"/>
                             <figcaption>
                                 <h2><i class="fa fa-play-circle" aria-hidden="true"></i>Lightbox <span> Video</span>
                                 </h2>
                                 <p>I designed this for a client for his cafe.</p>
-                                <a class="popup-vimeo" href="https://vimeo.com/45830194">View more</a>
+                                <a class="popup-youtube" href="https://www.youtube.com/watch?v=36MLtd3BPu4">View more</a>
                             </figcaption>
                         </figure>
                     </div>
@@ -804,11 +804,11 @@
                     <!--CATEGORY CONTENT THREE SMALL-->
                     <div class="col-md-4 col-sm-6 col-xs-12 grid inRight">
                         <figure class="port-effect-up">
-                            <img src="images/portfolios/portfolio-2.jpg" class="img-responsive" alt="portfolio-demo"/>
+                            <img src="{{asset('uploads/teacher/port3.jpg')}}" class="img-responsive" alt="portfolio-demo"/>
                             <figcaption>
                                 <h2>Lightbox <span> IMAGE</span></h2>
                                 <p>Two Hover Effect For Portfolio Grid Blocks. Its Up</p>
-                                <a href="images/portfolios/portfolio-2.jpg" class="popup-image"
+                                <a href="{{asset('uploads/teacher/port3.jpg')}}" class="popup-image"
                                    data-effect="mfp-move-horizontal">View more</a>
                             </figcaption>
                         </figure>
@@ -822,11 +822,11 @@
                     <!--CATEGORY CONTENT ONE BIG-->
                     <div class="col-md-4 col-sm-12 col-xs-12 grid big inRight">
                         <figure class="port-effect-up">
-                            <img src="images/portfolios/big-2.jpg" class="img-responsive" alt="portfolio-demo"/>
+                            <img src="{{asset('uploads/teacher/port4.jpg')}}" class="img-responsive" alt="portfolio-demo"/>
                             <figcaption>
                                 <h2>Lightbox <span> IMAGE</span></h2>
                                 <p>Effect also available for Lightbox Image Check The Doc</p>
-                                <a href="images/portfolios/big-2.jpg" class="popup-image"
+                                <a href="{{asset('uploads/teacher/port4.jpg')}}" class="popup-image"
                                    data-effect="mfp-move-from-top">View more</a>
                             </figcaption>
                         </figure>
@@ -835,11 +835,11 @@
                     <!--CATEGORY CONTENT TWO SMALL-->
                     <div class="col-md-4 col-sm-6 col-xs-12 grid inLeft">
                         <figure class="port-effect-scale">
-                            <img src="images/portfolios/portfolio-3.jpg" class="img-responsive" alt="portfolio-demo"/>
+                            <img src="{{asset('uploads/teacher/port5.jpg')}}" class="img-responsive" alt="portfolio-demo"/>
                             <figcaption>
                                 <h2>Lightbox <span> IMAGE</span></h2>
                                 <p>Used latest material design to make this sample</p>
-                                <a href="images/portfolios/portfolio-3.jpg" class="popup-image"
+                                <a href="{{asset('uploads/teacher/port5.jpg')}}" class="popup-image"
                                    data-effect="mfp-3d-unfold">View more</a>
                             </figcaption>
                         </figure>
