@@ -1,6 +1,6 @@
    @extends('main')
 
-@section('title','Halls')
+@section('title','FacultyPage')
 
 @section('stylesheets')
 	
