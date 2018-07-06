@@ -47,6 +47,13 @@ $(document).ready(function() {
       var selectedDate = $('#selectedDate').val();
       var cours_id = $('select[name=course_selector]').val();
       var hall_id = $('select[name=hall_selector]').val();
+      var picker_hour = $('#timepicker').val();
+
+      /* function toDate(dateStr) {
+        var parts = dateStr.split("-")
+        return new Date(parts[0], parts[1] - 1, parts[2])
+      }
+      var selectedDate = toDate(selectedDate_str); */
 
       //send data to server via AJAX
       $.ajax({
@@ -57,7 +64,8 @@ $(document).ready(function() {
         data: {
           selectedDate: selectedDate,
           cours_id: cours_id,
-          hall_id: hall_id
+          hall_id: hall_id,
+          picker_hour: picker_hour
         },
         url: sendAppointmentsRoute,
         dataType: 'json',

@@ -45,7 +45,7 @@
               </select>
             <br><br>
             <h6>Select the time:</h6>
-            <input class="timepicker" type="text" name="timepicker"/>
+            <input id="timepicker" class="timepicker" type="text" name="timepicker"/>
           </div>
 
           <!-- Modal footer -->

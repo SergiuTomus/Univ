@@ -46,8 +46,13 @@ class AppointmentController extends Controller
         $selectedDate = $request->selectedDate;
         $cours_id = $request->cours_id;
         $hall_id = $request->hall_id;
+        $picker_hour = $request->picker_hour;
+
+        $time = strtotime($selectedDate);
+
+        //var_dump($time);die;
         $addDate = DB::table('appointments')->insert([
-            'app_date' => $selectedDate,
+            'app_date' => $time,
             'user_id' => $id,
             'cours_id' => $cours_id,
             'hall_id' => $hall_id
