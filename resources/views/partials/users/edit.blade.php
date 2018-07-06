@@ -2,19 +2,29 @@
 
 @section('content')
 
-    <form method="post" action="route('users.edit', $user)">
-        {{ csrf_field() }}
-        {{ method_field('patch') }}
-        <label>Firstname </label>
-        <input type="text" name="first_name"  value="{{ $user->first_name }}" />
-        <br>
-        <label> Lastname</label>
-        <input type="text" name="last_name"  value="{{ $user->last_name }}" />
-        <br>
-        <label> Email</label>
-        <input type="email" name="email"  value="{{ $user->email }}" />
-        <br>
-        <button type="submit">Send</button>
-    </form>
+    {!! Form::model($user, ['action' => ['UserController@update', 'id' => $user['id']], 'method' => 'PUT']) !!}
+    <div class="form-group">
+        {!! Form::label('first_name', 'Name') !!}
+        {!! Form::text('first_name', $user['first_name'], [
+            'class' => 'form-control'
+        ]) !!}
+    </div>
+    <div class="form-group">
+        {!! Form::label('last_name', 'Name') !!}
+        {!! Form::text('last_name', $user['last_name'], [
+            'class' => 'form-control'
+        ]) !!}
+    </div>
+
+    <div class="form-group">
+        {!! Form::label('email', 'E-mail') !!}
+        {!! Form::text('email', $user['email'], [
+            'class' => 'form-control'
+        ]) !!}
+    </div>
+
+
+    <p><button type="submit" class="btn btn-primary">Update Profile</button></p>
+    {!! Form::close() !!}
 
 @endsection
