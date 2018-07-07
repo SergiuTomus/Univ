@@ -2,9 +2,9 @@
 @section('title','Teacher Page')
 
 @section('stylesheets')
-<link rel="icon" href="favicon.ico" type="image/x-icon"/>
-<link rel="icon" href="images/site/fav-icon.png">
-<link rel="apple-touch-icon" href="images/site/apple-touch-icon.png">
+<link rel="icon" href="{{asset('favicon.ico')}}" type="image/x-icon"/>
+<link rel="icon" href="{{asset('images/site/fav-icon.png')}}">
+<link rel="apple-touch-icon" href="{{asset('images/site/apple-touch-icon.png')}}">
 
 <link href='https://fonts.googleapis.com/css?family=Raleway:500' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
