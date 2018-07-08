@@ -55,11 +55,14 @@ Route::get('/faculty/{name}','FacultyPageController@faculty')->name('faculty.sho
           'uses' => 'UserController@update'
       ]);
 
-    Route::post('postAppointments', [
+      Route::post('postAppointments', [
       'as' => 'sendAppointments',
       'uses' => 'AppointmentController@postAppointments'
-    ]);
-
+      ]);
+      Route::get('getUserRole',[
+          'as' => 'getUserRole',
+          'uses' => 'AppointmentController@getUserRole'
+      ]);
 });
 
   Route::get('/',function (){

@@ -1,6 +1,15 @@
 $(document).ready(function() {
 
-
+        $.ajax({
+            url: role,
+            dataType: 'json',
+            data : { role : role },
+            success:function (response) {
+                if(response['userRole'] === 3) {
+                    $('#btn-sendData').hide();
+                }
+            }
+        });
 
     $('#calendar').fullCalendar({
         events: function(start, end, timezone, callback) {

@@ -17,6 +17,12 @@ class AppointmentController extends Controller
         $this->middleware('auth');
     }
 
+    public function getUserRole(){
+        $userRole = Auth::user()->role;
+        return response()->json(array('userRole' => $userRole), 200);
+
+    }
+
     public function appointment(){
 
         $courses = Courses::select('name', 'id')

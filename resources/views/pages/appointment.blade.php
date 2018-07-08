@@ -3,7 +3,7 @@
   <head>
     <meta charset='utf-8' />
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    
+
     <link href="{{asset('css/bootstrap.min.css')}}" rel='stylesheet'>
     <link href="{{asset('css/appointment/fullcalendar.min.css')}}" rel='stylesheet'>
     <link href="{{asset('css/appointment/fullcalendar.print.min.css')}}" media='print'>
@@ -19,13 +19,13 @@
     <div class="modal" id="myModal">
       <div class="modal-dialog">
         <div class="modal-content">
-        
+
           <!-- Modal Header -->
           <div class="modal-header">
             <h4 class="modal-title">Course scheduling</h4>
             <button type="button" class="close" data-dismiss="modal">&times;</button>
           </div>
-          
+
           <!-- Modal body -->
           <div class="modal-body">
          <!--  {!! csrf_field() !!} -->
@@ -53,7 +53,7 @@
             <button id="btn-sendData" type="button" class="btn btn-primary">Save changes</button>
             <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
           </div>
-          
+
         </div>
       </div>
     </div>
@@ -63,13 +63,13 @@
     <div class="modal" id="detailsModal">
       <div class="modal-dialog">
         <div class="modal-content">
-        
+
           <!-- Modal Header -->
           <div class="modal-header">
             <h4 class="modal-title">Appointment details</h4>
             <button type="button" class="close" data-dismiss="modal">&times;</button>
           </div>
-          
+
           <!-- Modal body -->
           <div class="modal-body">
 
@@ -80,7 +80,7 @@
             <button id="btn-delete" type="button" class="btn btn-primary">Delete appointment</button>
             <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
           </div>
-          
+
         </div>
       </div>
     </div>
@@ -88,6 +88,7 @@
     <script>
         var allAppointmentsRoute = "{{ route('allAppointments') }}";
         var sendAppointmentsRoute = "{{ route('sendAppointments') }}";
+        var role = "{{route('getUserRole') }}";
     </script>
 
     <script src="{{asset('js/jquery.js')}}"></script>
@@ -97,6 +98,6 @@
     <script src="{{asset('js/appointment/wickedpicker.js')}}"></script>
     <script src="{{asset('js/appointment/calendarfunction.js')}}"></script>
 
-   
+
   </body>
 </html>
