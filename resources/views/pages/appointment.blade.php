@@ -44,8 +44,11 @@
                 @endforeach
               </select>
             <br><br>
-            <h6>Select the time:</h6>
+            <h6>Select the time to start:</h6>
             <input class="timepicker" type="text" name="timepicker" id="timepicker" />
+            <br><br>
+            <h6>Select the time to end:</h6>
+            <input class="timepicker" type="text" name="timepicker2" id="timepicker2" />
           </div>
 
           <!-- Modal footer -->

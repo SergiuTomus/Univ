@@ -43,9 +43,12 @@ class AppointmentController extends Controller
     public function getAppointments()
     {
 
-        $appointments = Appointments::join('users','users.id','=','appointments.user_id')
-            ->select('*')
-            ->get();
+        $appointments = DB::table('appointments')
+        ->join('users', 'appointments.user_id', '=', 'users.id')
+        ->join('courses', 'appointments.course_id', '=', 'courses.id')
+        ->join('halls', 'appointments.hall_id', '=', 'halls.id')
+        ->select('appointments.id', 'appointments.app_date', 'appointments.end_date', 'appointments.user_id', 'users.first_name', 'users.last_name', 'courses.name as courseName', 'halls.name as hallName')
+        ->get();
 
         return response()->json(array('appointments'=> $appointments), 200);
     }
@@ -58,10 +61,13 @@ class AppointmentController extends Controller
         $course_id = $request->course_id;
         $hall_id = $request->hall_id;
         $timepicker = $request->timepicker;
+        $timepicker2 = $request->timepicker2;
         $dateTime= $selectedDate.' '.$timepicker;
+        $dateTime2= $selectedDate.' '.$timepicker2;
         //var_dump($dateTime); die;
         $addDate = DB::table('appointments')->insert([
             'app_date' => $dateTime,
+            'end_date' => $dateTime2,
             'user_id' => $id,
             'course_id' => $course_id,
             'hall_id' => $hall_id
