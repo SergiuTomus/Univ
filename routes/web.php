@@ -35,6 +35,7 @@ Route::get('/faculties', 'FacultiesController@faculties');
 Route::get('/faculty/{name}','FacultyPageController@faculty')->name('faculty.show');
 
 
+
   Route::middleware(['auth'])->group(function () {
 
     Route::get('/appointment', [
@@ -62,6 +63,14 @@ Route::get('/faculty/{name}','FacultyPageController@faculty')->name('faculty.sho
       Route::get('getUserRole',[
           'as' => 'getUserRole',
           'uses' => 'AppointmentController@getUserRole'
+      ]);
+      Route::get('getUserID',[
+          'as' => 'getUserID',
+          'uses' => 'AppointmentController@getUserID'
+      ]);
+      Route::post('dropAppointments', [
+      'as' => 'deleteAppointments',
+      'uses' => 'AppointmentController@dropAppointments'
       ]);
 });
 

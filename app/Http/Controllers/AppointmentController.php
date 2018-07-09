@@ -23,6 +23,13 @@ class AppointmentController extends Controller
 
     }
 
+    public function getUserID(){
+
+        $userid = Auth::user()->id;
+        
+        return response()->json(array('userid' => $userid), 200);
+    }
+
     public function appointment(){
 
         $courses = Courses::select('name', 'id')
@@ -72,5 +79,13 @@ class AppointmentController extends Controller
             'course_id' => $course_id,
             'hall_id' => $hall_id
         ]);
+    }
+
+    public function dropAppointments(Request $request)
+    {
+        
+        $dropDate = DB::table('appointments')
+        ->delete(['app_date','end_date', 'user_id', 'course_id', 'hall_id']);
+     
     }
 }
