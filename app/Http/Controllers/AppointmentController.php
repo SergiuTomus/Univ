@@ -23,6 +23,8 @@ class AppointmentController extends Controller
 
     }
 
+  
+
     public function appointment(){
 
         $courses = Courses::select('name', 'id')
@@ -39,6 +41,7 @@ class AppointmentController extends Controller
                     )
         );
     }
+
 
     public function getAppointments()
     {
