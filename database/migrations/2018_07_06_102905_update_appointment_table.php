@@ -15,7 +15,6 @@ class UpdateAppointmentTable extends Migration
     {
         Schema::table('appointments', function (Blueprint $table) {
             $table->dateTime('app_date')->change();
-            $table->renameColumn('cours_id', 'course_id');
         });
     }
 
