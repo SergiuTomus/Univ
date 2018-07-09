@@ -67,6 +67,12 @@ class AppointmentController extends Controller
         $selectedDate = $request->selectedDate;
         $course_id = $request->course_id;
         $hall_id = $request->hall_id;
+
+        $picker_hour = $request->picker_hour;
+
+        $time = strtotime($selectedDate);
+
+
         $timepicker = $request->timepicker;
         $timepicker2 = $request->timepicker2;
         $dateTime= $selectedDate.' '.$timepicker;

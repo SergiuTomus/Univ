@@ -1,5 +1,6 @@
 var rol;
 var userid;
+var appUser_id;
 $(document).ready(function() {
 
         $.ajax({
@@ -33,7 +34,7 @@ $(document).ready(function() {
                             events.push({
                                 title: response['appointments'][i]['hallName'],
                                 start: response['appointments'][i]['app_date'],
-                                user_id: response['appointments'][i]['user_id'],
+                                user_id: response['appointments'][i]['user_id']
                               });
                          }
 
@@ -62,6 +63,7 @@ $(document).ready(function() {
                     eventClick: function(calEvent, jsEvent, view) {
 
                       $('#detailsModal').modal('show');
+                       appUser_id = calEvent.user_id;
                       //alert('Event: ' + calEvent.start);
                       //alert('Coordinates: ' + jsEvent.pageX + ',' + jsEvent.pageY);
                       //alert('View: ' + view.name);
@@ -109,9 +111,9 @@ $(document).ready(function() {
 
 
                 };
-
+               
                 $('#btn-delete').click(function() {
-                  if(userid === calEvent.user_id){
+                  if(userid === appUser_id ){
                     return deleteAppointment();
                   }
 
