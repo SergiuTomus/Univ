@@ -75,8 +75,8 @@ class AppointmentController extends Controller
 
         $timepicker = $request->timepicker;
         $timepicker2 = $request->timepicker2;
-        $dateTime= $selectedDate.' '.$timepicker;
-        $dateTime2= $selectedDate.' '.$timepicker2;
+        $dateTime = $selectedDate.' '.$timepicker;
+        $dateTime2 = $selectedDate.' '.$timepicker2;
         //var_dump($dateTime); die;
         $addDate = DB::table('appointments')->insert([
             'app_date' => $dateTime,

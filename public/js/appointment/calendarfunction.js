@@ -1,6 +1,7 @@
 var rol;
 var userid;
 var appUser_id;
+var startHour, endHour;
 $(document).ready(function() {
 
         $.ajax({
@@ -34,7 +35,15 @@ $(document).ready(function() {
                             events.push({
                                 title: response['appointments'][i]['hallName'],
                                 start: response['appointments'][i]['app_date'],
-                                user_id: response['appointments'][i]['user_id']
+
+                                user_id: response['appointments'][i]['user_id'],
+                                app_id: response['appointments'][i]['id'],
+                                course: response['appointments'][i]['courseName'],
+                                hall: response['appointments'][i]['hallName'],
+                                first_name: response['appointments'][i]['first_name'],
+                                last_name: response['appointments'][i]['last_name'],
+                                start_hour: response['appointments'][i]['app_date'].substr(11, 5),
+                                end_hour: response['appointments'][i]['end_date'].substr(11, 5)
                               });
                          }
 
@@ -46,7 +55,7 @@ $(document).ready(function() {
                     dayClick: function(date, jsEvent, view) {
 
                      // alert('Clicked on: ' + date.format());
-                        if(rol === 3) {
+                        if(rol === 2) {
                             return false;
                         }
                         else {
@@ -64,14 +73,17 @@ $(document).ready(function() {
 
                       $('#detailsModal').modal('show');
                        appUser_id = calEvent.user_id;
-                      //alert('Event: ' + calEvent.start);
-                      //alert('Coordinates: ' + jsEvent.pageX + ',' + jsEvent.pageY);
-                      //alert('View: ' + view.name);
 
-                      // change the border color just for fun
+                       
+                       //alert(startHour + ' - '  + endHour);
+                      
+                       $('#courseEvent').html('Course name: ' + calEvent.course);
+                       $('#teacherEvent').html('Teacher name: ' + calEvent.first_name + ' ' + calEvent.last_name);
+                       $('#hallEvent').html('Reserved hall: ' + calEvent.hall);
+                       $('#dateEvent').html('The appointment time: ' + calEvent.start_hour + ' - ' + calEvent.end_hour);
+
+                      // change the border color
                       $(this).css('border-color', 'red');
-
-
 
                     }
 

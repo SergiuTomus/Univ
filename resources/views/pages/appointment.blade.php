@@ -75,7 +75,11 @@
 
           <!-- Modal body -->
           <div class="modal-body">
-            <h6>Test</h6>
+            <h6 id="courseEvent">Course</h6>
+            <h6 id="teacherEvent">Teacher</h6>
+            <h6 id="hallEvent">Hall</h6>
+            <h6 id="dateEvent">Date</h6>
+
           </div>
 
           <!-- Modal footer -->
