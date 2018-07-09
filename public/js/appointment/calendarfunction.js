@@ -72,20 +72,33 @@ $(document).ready(function() {
     };
 
   /*Cancel Button*/
-  $('#btn-cancelData').click(function() 
+  $('btn-delete').click(function() 
   { 
     deleteAppointment();
   });
 
   function deleteAppointment() 
   {
-            
+      $('#myModal').modal('toggle'); 
+      var selectedDate = $('#selectedDate').val();
+      var cours_id = $('select[name=course_selector]').val();  
+
+      $.ajax({
+        headers: {
+          'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        },
+        type: "DELETE",
+        data: {
+          selectedDate: selectedDate,
+          cours_id: cours_id,
+
+        },
+        url: deleteAppointmentsRoute,
+        dataType: 'json',
+        success: function(data){
+          console.log(data);
+        }
+      });   
   };
-
-  function dropCalendarDate()
-  {
-          
-  }
-
 
 });

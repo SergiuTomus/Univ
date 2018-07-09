@@ -91,6 +91,7 @@
     <script>
         var allAppointmentsRoute = "{{ route('allAppointments') }}";
         var sendAppointmentsRoute = "{{ route('sendAppointments') }}";
+        var deleteAppointmentsRoute = "{{ route('deleteAppointments') }}";
     </script>
 
     <script src="{{asset('js/jquery.js')}}"></script>

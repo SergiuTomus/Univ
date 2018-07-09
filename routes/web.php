@@ -51,6 +51,12 @@ Route::get('/faculty/{name}','FacultyPageController@faculty')->name('faculty.sho
       'uses' => 'AppointmentController@postAppointments'
     ]);
 
+    /*Route delete appoinment*/
+    Route::get('deleteAppointments',[
+      'as' => 'deleteAppointments',
+      'uses' => 'AppointmentController@deleteAppointments'
+    ]);
+
 });
 
   Route::get('/',function (){
