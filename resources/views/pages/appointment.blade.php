@@ -75,7 +75,7 @@
 
           <!-- Modal body -->
           <div class="modal-body">
-
+            <h6>Test</h6>
           </div>
 
           <!-- Modal footer -->
