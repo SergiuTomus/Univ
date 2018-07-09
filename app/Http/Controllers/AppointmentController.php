@@ -84,8 +84,10 @@ class AppointmentController extends Controller
     public function dropAppointments(Request $request)
     {
         
-        $dropDate = DB::table('appointments')
-        ->delete(['app_date','end_date', 'user_id', 'course_id', 'hall_id']);
+        $appointments = DB::table('appointments')
+        ->select('appointments.*')
+            ->dropColumn(['id','app_date','user_id','course_id','hall_id','end_date']);
+        
      
     }
 }
