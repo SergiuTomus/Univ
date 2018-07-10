@@ -89,9 +89,9 @@ $(document).ready(function() {
 
                        var startTime = calEvent.start_time;
                        var endTime = calEvent.end_time;
-                       var startHour= startTime.substr(11, 5); 
+                       var startHour= startTime.substr(11, 5);
                        var endHour = endTime.substr(11, 5);
-                      
+
                        $('#courseEvent').html('Course name: ' + calEvent.course);
                        $('#teacherEvent').html('Teacher name: ' + calEvent.first_name + ' ' + calEvent.last_name);
                        $('#hallEvent').html('Reserved hall: ' + calEvent.hall);
@@ -112,9 +112,10 @@ $(document).ready(function() {
                   var selectedDate = $('#selectedDate').val();
                   var course_id = $('select[name=course_selector]').val();
                   var hall_id = $('select[name=hall_selector]').val();
+                  var hall_name = $('select[name=hall_selector]').text();
                   var timepicker = $('#timepicker').val();
                   var timepicker2 = $('#timepicker2').val();
-                  
+
                   //send data to server via AJAX
                   $.ajax({
                     headers: {
@@ -130,14 +131,22 @@ $(document).ready(function() {
                     },
                     url: sendAppointmentsRoute,
                     dataType: 'json',
-                    success: function(data){
-                      console.log(data);
+                    success: function(response){
+                        if(response['success'] === true){
+
+                            $('#calendar').fullCalendar('renderEvent',{
+                                title: response['time'] + ' ' + response['hallname'],
+                                start: response['date']
+
+                            });
+                        }
+
                     }
                   });
 
 
                 };
-               
+
                 $('#btn-delete').click(function() {
                   if(userid === user_id ){
                     $('#detailsModal').modal('toggle');
@@ -161,7 +170,7 @@ $(document).ready(function() {
 
 
                       app_id: app_id
-                      
+
                       },
                     url: deleteAppointmentsRoute,
                     dataType: 'json',
