@@ -70,14 +70,24 @@ class AppointmentController extends Controller
         $selectedDate = $request->selectedDate;
         $course_id = $request->course_id;
         $hall_id = $request->hall_id;
-        $timepicker = $request->timepicker;
-        $timepicker2 = $request->timepicker2;
-        $dateTime= $selectedDate.' '.$timepicker;
-        $dateTime2= $selectedDate.' '.$timepicker2;
+        $startTimepicker = $request->timepicker;
+        $endTimepicker = $request->timepicker2;
+        $startTime= $selectedDate.' '.$startTimepicker;
+        $endTime= $selectedDate.' '.$endTimepicker;
         //var_dump($dateTime); die;
+
+
+        
+        $restrict = DB::table('appointments')
+        ->join('halls', 'appointments.hall_id', '=', 'halls.id')
+        ->select()
+        ->get();
+
+
+
         $addDate = DB::table('appointments')->insert([
-            'app_date' => $dateTime,
-            'end_date' => $dateTime2,
+            'app_date' => $startTime,
+            'end_date' => $endTime,
             'user_id' => $id,
             'course_id' => $course_id,
             'hall_id' => $hall_id
