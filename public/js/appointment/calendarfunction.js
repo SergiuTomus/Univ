@@ -1,7 +1,7 @@
 var rol;
 var userid;
 var appUser_id;
-var startHour, endHour;
+
 $(document).ready(function() {
 
         $.ajax({
@@ -42,8 +42,8 @@ $(document).ready(function() {
                                 hall: response['appointments'][i]['hallName'],
                                 first_name: response['appointments'][i]['first_name'],
                                 last_name: response['appointments'][i]['last_name'],
-                                start_hour: response['appointments'][i]['app_date'].substr(11, 5),
-                                end_hour: response['appointments'][i]['end_date'].substr(11, 5)
+                                start_time: response['appointments'][i]['app_date'],
+                                end_time: response['appointments'][i]['end_date']
                               });
                          }
 
@@ -74,13 +74,15 @@ $(document).ready(function() {
                       $('#detailsModal').modal('show');
                        appUser_id = calEvent.user_id;
 
-                       
-                       //alert(startHour + ' - '  + endHour);
+                       var startTime = calEvent.start_time;
+                       var endTime = calEvent.end_time;
+                       var startHour= startTime.substr(11, 5); 
+                       var endHour = endTime.substr(11, 5);
                       
                        $('#courseEvent').html('Course name: ' + calEvent.course);
                        $('#teacherEvent').html('Teacher name: ' + calEvent.first_name + ' ' + calEvent.last_name);
                        $('#hallEvent').html('Reserved hall: ' + calEvent.hall);
-                       $('#dateEvent').html('The appointment time: ' + calEvent.start_hour + ' - ' + calEvent.end_hour);
+                       $('#dateEvent').html('The appointment time: ' + startHour + ' - ' + endHour);
 
                       // change the border color
                       $(this).css('border-color', 'red');
@@ -88,7 +90,6 @@ $(document).ready(function() {
                     }
 
                 });
-
                 $('#btn-sendData').click(function() {
                   submitAppointment();
                 });
@@ -100,7 +101,7 @@ $(document).ready(function() {
                   var hall_id = $('select[name=hall_selector]').val();
                   var timepicker = $('#timepicker').val();
                   var timepicker2 = $('#timepicker2').val();
-
+                  
                   //send data to server via AJAX
                   $.ajax({
                     headers: {
