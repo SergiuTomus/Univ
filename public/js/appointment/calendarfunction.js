@@ -175,7 +175,8 @@ $(document).ready(function() {
                     url: deleteAppointmentsRoute,
                     dataType: 'json',
                     success: function(data){
-                      console.log(data);
+                      $('#calendar').fullCalendar('removeEvent', app_id);
+                      refreshtable();
                     }
                   });
 
