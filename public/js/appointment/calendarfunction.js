@@ -24,7 +24,7 @@ $(document).ready(function() {
             }
         });
 
-                  $('#calendar').fullCalendar({
+                   $('#calendar').fullCalendar({
                     events: function(start, end, timezone, callback) {
                       $.ajax({
                         url: allAppointmentsRoute,
@@ -100,6 +100,8 @@ $(document).ready(function() {
                       // change the border color
                       $(this).css('border-color', 'red');
 
+
+
                     }
 
                 });
@@ -165,9 +167,16 @@ $(document).ready(function() {
                       },
                     url: deleteAppointmentsRoute,
                     dataType: 'json',
-                    success: function(data){
-                      console.log(data);
-                    }
+
+                    success: function(response){
+
+                    $('#calendar').fullCalendar('removeEvents', calEvent._id);  
+                             
+
+
+
+                   }
+      
                   });
 
 
