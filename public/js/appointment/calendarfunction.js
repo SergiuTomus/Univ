@@ -140,7 +140,9 @@ $(document).ready(function() {
                
                 $('#btn-delete').click(function() {
                   if(userid === user_id ){
+                    $('#detailsModal').modal('toggle');
                     return deleteAppointment();
+
                   }
 
                   else {
