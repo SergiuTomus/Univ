@@ -23,6 +23,12 @@ class AppointmentController extends Controller
 
     }
 
+    public function getUserid(){
+        $userid = Auth::user()->id;
+        return response()->json(array('userid' => $userid), 200);
+
+    }
+
   
 
     public function appointment(){
@@ -77,4 +83,18 @@ class AppointmentController extends Controller
             'hall_id' => $hall_id
         ]);
     }
+
+
+    public function dropAppointments(Request $request)
+     {   
+        $app_id=$request->app_id;
+        
+        DB::table('appointments')->where('id', '=', $app_id)->delete();
+
+
+      
+        
+     
+    }
+
 }

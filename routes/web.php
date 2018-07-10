@@ -68,7 +68,7 @@ Route::get('/faculty/{name}','FacultyPageController@faculty')->name('faculty.sho
           'as' => 'getUserID',
           'uses' => 'AppointmentController@getUserID'
       ]);
-      Route::post('dropAppointments', [
+      Route::delete('dropAppointments', [
       'as' => 'deleteAppointments',
       'uses' => 'AppointmentController@dropAppointments'
       ]);
