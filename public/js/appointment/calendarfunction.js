@@ -1,6 +1,7 @@
 var rol;
 var userid;
 var appUser_id;
+var id;
 $(document).ready(function() {
 
         $.ajax({
@@ -34,7 +35,8 @@ $(document).ready(function() {
                             events.push({
                                 title: response['appointments'][i]['hallName'],
                                 start: response['appointments'][i]['app_date'],
-                                user_id: response['appointments'][i]['user_id']
+                                user_id: response['appointments'][i]['user_id'],
+                                id: response['appointments'][i]['id']
                               });
                          }
 
@@ -64,6 +66,7 @@ $(document).ready(function() {
 
                       $('#detailsModal').modal('show');
                        appUser_id = calEvent.user_id;
+                       id = calEvent.id;
                       //alert('Event: ' + calEvent.start);
                       //alert('Coordinates: ' + jsEvent.pageX + ',' + jsEvent.pageY);
                       //alert('View: ' + view.name);
@@ -125,12 +128,7 @@ $(document).ready(function() {
 
                 function deleteAppointment() {
                   $('#myModal').modal('toggle');
-                  var selectedDate = $('#selectedDate').val();
-                  var course_id = $('select[name=course_selector]').val();
-                  var hall_id = $('select[name=hall_selector]').val();
-                  var timepicker = $('#timepicker').val();
-                  var timepicker2 = $('#timepicker2').val();
-
+                  var selectedId = $('#selectedDate').id;
                   //send data to server via AJAX
                   $.ajax({
                     headers: {
@@ -138,11 +136,7 @@ $(document).ready(function() {
                     },
                     type: "POST",
                     data: {
-                      selectedDate: selectedDate,
-                      course_id: course_id,
-                      hall_id: hall_id,
-                      timepicker: timepicker,
-                      timepicker2: timepicker2
+                      id : selectedId
                     },
                     url: deleteAppointmentsRoute,
                     dataType: 'json',

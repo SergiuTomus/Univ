@@ -87,12 +87,10 @@ class AppointmentController extends Controller
         ]);
     }
 
-    public function dropAppointments(Request $request)
-    {
+    public function dropAppointments($id)
+    {   
         
-        $appointments = DB::table('appointments')
-        ->select('appointments.*')
-            ->dropColumn(['id','app_date','user_id','course_id','hall_id','end_date']);
+        $appointments = Appointments::destroy($id);
         
      
     }
