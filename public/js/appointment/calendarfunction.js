@@ -1,11 +1,9 @@
 var rol;
 var userid;
 var appUser_id;
-<<<<<<< HEAD
-var id;
-=======
+var app_id;
 var startHour, endHour;
->>>>>>> master
+
 $(document).ready(function() {
 
         $.ajax({
@@ -77,9 +75,11 @@ $(document).ready(function() {
                     eventClick: function(calEvent, jsEvent, view) {
 
                       $('#detailsModal').modal('show');
-                       appUser_id = calEvent.user_id;
+                       //alert('Event: ' + calEvent.user_id);
 
-                       id = calEvent.id;
+                       user_id = calEvent.user_id;
+
+                       app_id = calEvent.app_id;
                       //alert('Event: ' + calEvent.start);
                       //alert('Coordinates: ' + jsEvent.pageX + ',' + jsEvent.pageY);
                       //alert('View: ' + view.name);
@@ -138,7 +138,7 @@ $(document).ready(function() {
                 };
                
                 $('#btn-delete').click(function() {
-                  if(userid === appUser_id ){
+                  if(userid === user_id ){
                     return deleteAppointment();
                   }
 
@@ -149,17 +149,17 @@ $(document).ready(function() {
                 });
 
                 function deleteAppointment() {
-                  $('#myModal').modal('toggle');
-                  var selectedId = $('#selectedDate').id;
-                  //send data to server via AJAX
                   $.ajax({
                     headers: {
                       'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                     },
-                    type: "POST",
+                    type: "delete",
                     data: {
-                      id : selectedId
-                    },
+
+
+                      app_id: app_id
+                      
+                      },
                     url: deleteAppointmentsRoute,
                     dataType: 'json',
                     success: function(data){
@@ -169,7 +169,6 @@ $(document).ready(function() {
 
 
                 };
-
 
 
         });
