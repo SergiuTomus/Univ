@@ -43,6 +43,7 @@ class AppointmentController extends Controller
     }
 
 
+
     public function getAppointments()
     {
 
