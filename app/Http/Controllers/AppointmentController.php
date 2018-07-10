@@ -23,12 +23,7 @@ class AppointmentController extends Controller
 
     }
 
-    public function getUserID(){
-
-        $userid = Auth::user()->id;
-        
-        return response()->json(array('userid' => $userid), 200);
-    }
+  
 
     public function appointment(){
 
@@ -46,6 +41,8 @@ class AppointmentController extends Controller
                     )
         );
     }
+
+
 
     public function getAppointments()
     {
@@ -67,16 +64,10 @@ class AppointmentController extends Controller
         $selectedDate = $request->selectedDate;
         $course_id = $request->course_id;
         $hall_id = $request->hall_id;
-
-        $picker_hour = $request->picker_hour;
-
-        $time = strtotime($selectedDate);
-
-
         $timepicker = $request->timepicker;
         $timepicker2 = $request->timepicker2;
-        $dateTime = $selectedDate.' '.$timepicker;
-        $dateTime2 = $selectedDate.' '.$timepicker2;
+        $dateTime= $selectedDate.' '.$timepicker;
+        $dateTime2= $selectedDate.' '.$timepicker2;
         //var_dump($dateTime); die;
         $addDate = DB::table('appointments')->insert([
             'app_date' => $dateTime,
@@ -85,13 +76,5 @@ class AppointmentController extends Controller
             'course_id' => $course_id,
             'hall_id' => $hall_id
         ]);
-    }
-
-    public function dropAppointments(Request $request)
-    {
-        
-        $dropDate = DB::table('appointments')
-        ->delete(['app_date','end_date', 'user_id', 'course_id', 'hall_id']);
-     
     }
 }
