@@ -55,7 +55,7 @@ $(document).ready(function() {
                     dayClick: function(date, jsEvent, view) {
 
                      // alert('Clicked on: ' + date.format());
-                        if(rol === 2) {
+                        if(rol === 3) {
                             return false;
                         }
                         else {
