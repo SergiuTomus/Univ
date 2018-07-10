@@ -1,7 +1,11 @@
 var rol;
 var userid;
 var appUser_id;
+<<<<<<< HEAD
 var id;
+=======
+var startHour, endHour;
+>>>>>>> master
 $(document).ready(function() {
 
         $.ajax({
@@ -35,8 +39,16 @@ $(document).ready(function() {
                             events.push({
                                 title: response['appointments'][i]['hallName'],
                                 start: response['appointments'][i]['app_date'],
+
+
                                 user_id: response['appointments'][i]['user_id'],
-                                id: response['appointments'][i]['id']
+                                app_id: response['appointments'][i]['id'],
+                                course: response['appointments'][i]['courseName'],
+                                hall: response['appointments'][i]['hallName'],
+                                first_name: response['appointments'][i]['first_name'],
+                                last_name: response['appointments'][i]['last_name'],
+                                start_hour: response['appointments'][i]['app_date'].substr(11, 5),
+                                end_hour: response['appointments'][i]['end_date'].substr(11, 5)
                               });
                          }
 
@@ -66,6 +78,7 @@ $(document).ready(function() {
 
                       $('#detailsModal').modal('show');
                        appUser_id = calEvent.user_id;
+
                        id = calEvent.id;
                       //alert('Event: ' + calEvent.start);
                       //alert('Coordinates: ' + jsEvent.pageX + ',' + jsEvent.pageY);
@@ -74,7 +87,16 @@ $(document).ready(function() {
                       // change the border color just for fun
                       $(this).css('border-color', 'red');
 
+                       
+                       //alert(startHour + ' - '  + endHour);
+                      
+                       $('#courseEvent').html('Course name: ' + calEvent.course);
+                       $('#teacherEvent').html('Teacher name: ' + calEvent.first_name + ' ' + calEvent.last_name);
+                       $('#hallEvent').html('Reserved hall: ' + calEvent.hall);
+                       $('#dateEvent').html('The appointment time: ' + calEvent.start_hour + ' - ' + calEvent.end_hour);
 
+                      // change the border color
+                      $(this).css('border-color', 'red');
 
                     }
 
