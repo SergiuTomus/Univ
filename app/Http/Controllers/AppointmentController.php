@@ -29,7 +29,7 @@ class AppointmentController extends Controller
 
     }
 
-  
+
 
     public function appointment(){
 
@@ -65,6 +65,8 @@ class AppointmentController extends Controller
 
     public function postAppointments(Request $request)
     {
+
+
         // return $request;
         $id = Auth::user()->id;
         $selectedDate = $request->selectedDate;
@@ -82,18 +84,26 @@ class AppointmentController extends Controller
             'course_id' => $course_id,
             'hall_id' => $hall_id
         ]);
+        $hall = Halls::find($hall_id);
+        return response()->json(array('success' => true,
+            'time' => $timepicker,
+            'date' => $selectedDate,
+            'hallname' => $hall['name']
+), 200);
     }
 
 
     public function dropAppointments(Request $request)
-     {   
+     {
         $app_id=$request->app_id;
-   
+
 
         DB::table('appointments')->where('id', '=', $app_id)->delete();
 
+
+       
         return response()->json(array('id'=> $app_id), 200);
-     
+
     }
 
 }
