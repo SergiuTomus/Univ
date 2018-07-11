@@ -41,11 +41,12 @@
                     <li class="dropdown">
                         <a href="/faculties/all" onclick="location.href='/faculties'" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Faculties + </a>
                         <ul class="dropdown-menu" id="dropdown-sticky">
-                            <li><a href="/faculty/economics">Economics</a></li>
-                            <li><a href="/faculty/science">Science</a></li>
-                            <li><a href="/faculty/arts">Arts</a></li>
-                            <li><a href="faculty/design">Design</a></li>
-                            <li><a href="/faculty/literature">Literature</a></li>
+
+
+
+                            {{--@foreach($faculties as $faculty)
+                                <li><a href="{{route('faculties.show',$faculty->name)}}">{{$faculty->name}}</a></li>
+                            @endforeach--}}
                         </ul>
                     </li>
                     <li><a href="/courses/all"> Courses </a></li>
@@ -63,7 +64,6 @@
                         <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                     </li>
                 @else
-                    <li class="nav-item"><a href="{{route('users.show',Auth::user()->slug)}}" class="nav-link"> {{Auth::user()->first_name}}  {{Auth::user()->last_name}}</a></li>
                     <li class="nav-item dropdown">
                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                             <span class="caret"></span>
@@ -86,3 +86,4 @@
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
+

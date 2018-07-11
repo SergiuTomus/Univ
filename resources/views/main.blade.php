@@ -22,6 +22,9 @@
 
     @include('partials._navbar')
 
+
+
+
 </header>
 
 @yield('content')
