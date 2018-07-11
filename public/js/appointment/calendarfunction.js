@@ -179,9 +179,10 @@ $(document).ready(function() {
                     url: deleteAppointmentsRoute,
                     dataType: 'json',
 
-                    success: function(data){
+                    success: function(response){
 
-                        //alert("s-a dusss"+data);
+                        alert("Appointment deleted, click OK.");
+
                    $('#calendar').fullCalendar('refetchEvents');
 
                    },
