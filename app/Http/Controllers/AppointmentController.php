@@ -19,6 +19,7 @@ class AppointmentController extends Controller
 
     public function getUserRole(){
         $userRole = Auth::user()->role;
+
         return response()->json(array('userRole' => $userRole), 200);
 
     }
@@ -38,7 +39,7 @@ class AppointmentController extends Controller
 
         $halls = Halls::select('name', 'id')
         ->get();
-        //var_dump($courses);die;
+        
 
         return view('pages.appointment',
                     array(
@@ -74,12 +75,29 @@ class AppointmentController extends Controller
         $hall_id = $request->hall_id;
         $timepicker = $request->timepicker;
         $timepicker2 = $request->timepicker2;
-        $dateTime= $selectedDate.' '.$timepicker;
-        $dateTime2= $selectedDate.' '.$timepicker2;
-        //var_dump($dateTime); die;
+        $start_time= $selectedDate.' '.$timepicker;
+        $end_time= $selectedDate.' '.$timepicker2;
+        
+
+
+        $appRestrict = DB::table('appointments')
+        ->where('hall_id', '=', $hall_id)
+        ->where('app_date', '>=', $start_time)
+        ->where('app_date', '<', $end_time)
+        ->orWhere('end_date', '>', $start_time)
+        ->where('end_date', '<', $end_time)
+        ->get()
+        ->toArray();
+        
+        //var_dump(count($appRestrict));die;
+
+        if(count($appRestrict) > 0){
+            return response()->json(array('error' => true), 200);   
+        }
+
         $addDate = DB::table('appointments')->insert([
-            'app_date' => $dateTime,
-            'end_date' => $dateTime2,
+            'app_date' => $start_time,
+            'end_date' => $end_time,
             'user_id' => $id,
             'course_id' => $course_id,
             'hall_id' => $hall_id
@@ -89,7 +107,7 @@ class AppointmentController extends Controller
             'time' => $timepicker,
             'date' => $selectedDate,
             'hallname' => $hall['name']
-), 200);
+        ), 200);
     }
 
 
@@ -97,7 +115,12 @@ class AppointmentController extends Controller
      {
         $app_id=$request->app_id;
 
-        DB::table('appointments')->where('id', '=', $app_id)->delete();
+        $user_role = Auth::user()->role;
+
+        if ($user_role < 3) {
+            DB::table('appointments')->where('id', '=', $app_id)->delete();
+        }
+
 
 
         return response()->json(array('success' => true,), 200);       

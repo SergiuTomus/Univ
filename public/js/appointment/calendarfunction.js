@@ -61,6 +61,7 @@ $(document).ready(function() {
 
                      // alert('Clicked on: ' + date.format());
                         if(rol === 3) {
+                            $('#btn-delete').hide();
                             return false;
                         }
                         else {
@@ -136,6 +137,11 @@ $(document).ready(function() {
                     url: sendAppointmentsRoute,
                     dataType: 'json',
                     success: function(response){
+
+                        if(response['error'] === true){
+                          alert('In that timeframe, the hall you selected is occupied.\nPlease select again.');
+                        }
+
                         if(response['success'] === true){
 
                             $('#calendar').fullCalendar('refetchEvents');
