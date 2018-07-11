@@ -98,12 +98,19 @@ class AppointmentController extends Controller
         $app_id=$request->app_id;
 
 
+
         DB::table('appointments')->where('id', '=', $app_id)->delete();
 
 
        
-        return response()->json(array('id'=> $app_id), 200);
+        
+        return response()->json(array('success' => true,
+            
+), 200);       
+
 
     }
 
 }
+
+        

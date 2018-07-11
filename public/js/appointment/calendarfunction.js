@@ -152,7 +152,9 @@ $(document).ready(function() {
                 $('#btn-delete').click(function() {
                   if(userid === user_id ){
                     $('#detailsModal').modal('toggle');
+                   
                     return deleteAppointment();
+
 
                   }
 
@@ -177,15 +179,17 @@ $(document).ready(function() {
                     url: deleteAppointmentsRoute,
                     dataType: 'json',
 
-                    success: function(response){
+                    success: function(data){
 
-                    $('#calendar').fullCalendar('removeEvents', calEvent._id);  
-                             
+                        //alert("s-a dusss"+data);
+                   $('#calendar').fullCalendar('refetchEvents');
+
+                   },
+                   
+
+                    
 
 
-
-                   }
-      
                   });
 
 
