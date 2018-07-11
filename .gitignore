@@ -1,2 +1,3 @@
 /vendor
 /.idea
+app/Http/ViewComposers/NavComposer.php

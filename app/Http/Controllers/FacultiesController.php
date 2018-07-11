@@ -4,22 +4,18 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Faculties;
+use Illuminate\View\View;
 
 
-class FacultiesController extends Controller
+class FacultiesController extends BaseController
 {
+    public $faculties;
 
-    public function faculties()
+    public function __construct()
     {
 
-        $faculties=	Faculties::leftjoin('media','faculties.id', '=' , 'media.entity_id')
-        ->where('media.type','=','faculties')
-        ->select('*')
-        ->get();
-
-
-                return view('pages.faculties',array('faculties' => $faculties));
-
+        $faculties = Faculties::select('*')
+            ->get();
     }
 
 }
