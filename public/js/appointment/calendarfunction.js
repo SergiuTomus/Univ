@@ -53,7 +53,9 @@ $(document).ready(function() {
                           callback(events);
                         }
                       });
-                    },
+
+                      },
+                      timeFormat: 'H:mm',
 
                     dayClick: function(date, jsEvent, view) {
 
@@ -136,11 +138,7 @@ $(document).ready(function() {
                     success: function(response){
                         if(response['success'] === true){
 
-                            $('#calendar').fullCalendar('renderEvent',{
-                                title: response['time'] + ' ' + response['hallname'],
-                                start: response['date']
-
-                            });
+                            $('#calendar').fullCalendar('refetchEvents');
                         }
 
                     }
@@ -152,7 +150,7 @@ $(document).ready(function() {
                 $('#btn-delete').click(function() {
                   if(userid === user_id ){
                     $('#detailsModal').modal('toggle');
-                   
+
                     return deleteAppointment();
 
 
@@ -186,9 +184,9 @@ $(document).ready(function() {
                    $('#calendar').fullCalendar('refetchEvents');
 
                    },
-                   
 
-                    
+
+
 
 
                   });
