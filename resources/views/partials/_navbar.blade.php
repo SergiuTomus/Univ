@@ -39,14 +39,11 @@
                 @else
                     <li class="active"><a href="/"> Home <span class="sr-only">(current)</span></a></li>
                     <li class="dropdown">
-                        <a href="/faculties/all" onclick="location.href='/faculties'" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Faculties + </a>
+                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Faculties + </a>
                         <ul class="dropdown-menu" id="dropdown-sticky">
-
-
-
-                            {{--@foreach($faculties as $faculty)
-                                <li><a href="{{route('faculties.show',$faculty->name)}}">{{$faculty->name}}</a></li>
-                            @endforeach--}}
+                            @foreach($faculties as $faculty)
+                                <li><a href="{{route('faculties.show',$faculty->slug)}}">{{$faculty->name}}</a></li>
+                            @endforeach
                         </ul>
                     </li>
                     <li><a href="/courses/all"> Courses </a></li>

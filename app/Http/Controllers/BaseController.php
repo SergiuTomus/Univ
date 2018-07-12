@@ -3,19 +3,19 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\View\View
+use Illuminate\Support\Facades\View;
 use App\Faculties;
 
 
 class BaseController extends Controller
 {
+    public $faculties;
     public function __construct()
     {
-        parent::__construct();
+        $faculties = Faculties::all();
 
-        View::share('faculties','facuktate');
+
+        View::share('faculties',$faculties);
     }
-    public function basic(){
-        return view('main');
-    }
+
 }

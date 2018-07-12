@@ -4,18 +4,17 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Faculties;
-use Illuminate\View\View;
+use Illuminate\Support\Facades\View;
 
 
-class FacultiesController extends BaseController
+class FacultiesController extends Controller
 {
-    public $faculties;
 
-    public function __construct()
-    {
+    public function index(){
 
-        $faculties = Faculties::select('*')
-            ->get();
+        $faculties = Faculties::show();
+
+        return view('main');
     }
 
 }

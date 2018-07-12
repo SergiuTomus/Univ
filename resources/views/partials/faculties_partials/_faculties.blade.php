@@ -2,7 +2,7 @@
 <div class="container my-4">
 
       <!-- Jumbotron Header -->
-     
+
 
       <!-- Page Features -->
       <div class="row text-center">
@@ -17,10 +17,10 @@
               <p class="card-text">{{$faculty->description}}</p>
             </div>
             <div class="card-footer">
-              <a href="{{route('faculty.show',$faculty->slug)}}" class="btn btn-primary btn-lg">Go To..</a>
+              <a href="{{route('faculties.show',$faculty->slug)}}" class="btn btn-primary btn-lg">Go To..</a>
             </div>
           </div>
-        </div>  
+        </div>
 
         @endforeach
 

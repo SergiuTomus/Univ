@@ -20,8 +20,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/faculty/{name}','FacultyPageController@faculty')->name('faculty.show');
-
 Route::get('/contact', 'ContactController@contact');
 
 Route::get('/teachers', 'TeachersController@teachers');
@@ -30,9 +28,7 @@ Route::get('/hall/{name}', 'HallsPageController@hall')->name('hall.show');
 
 Route::get('/teacher/{name}', 'TeacherPageController@teacher')->name('teacher.show');
 
-Route::get('/faculties', 'FacultiesController@faculties');
-
-Route::get('/faculty/{name}','FacultyPageController@faculty')->name('faculty.show');
+Route::get('/faculty/{name}','FacultyPageController@faculty')->name('faculties.show');
 
 
 
