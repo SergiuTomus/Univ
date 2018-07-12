@@ -21,7 +21,7 @@
                 <h5><b> Last name : </b><p> {{$user['last_name']}}</p></h5>
                 <h5><b> E-mail : </b><p> {{$user['email']}}</p></h5>
                 <br>
-                
+
             </div>
         </div>
     </div>
