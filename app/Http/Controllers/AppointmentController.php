@@ -77,11 +77,7 @@ class AppointmentController extends Controller
         //var_dump($dateTime); die;
 
 
-        
-        $restrict = DB::table('appointments')
-        ->join('halls', 'appointments.hall_id', '=', 'halls.id')
-        ->select()
-        ->get();
+       
 
 
 
